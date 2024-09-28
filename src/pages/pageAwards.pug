@@ -1,0 +1,15 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-inner'
+
+block content
+    svg(width=10 height=7)
+        use(xlink:href='/public/sprite.svg#icon-checkbox')
+    svg
+        use(xlink:href='/public/sprite.svg#icon-cross-red')
+    svg
+        use(xlink:href='/public/sprite.svg#icon-checkbox')
+    svg
+        use(xlink:href='/public/sprite.svg#icon-notification')
+    //include ../views/components/component

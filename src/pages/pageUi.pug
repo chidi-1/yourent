@@ -1,0 +1,269 @@
+extends ../views/layouts/layout-ui
+
+block vars
+    - var pageClass = 'page-ui'
+
+block content
+    include ../views/components/header
+    include ../views/components/footer
+
+    section
+        .container
+            .mb-20
+                h2 Typography
+
+                h1 Заголовок h1
+                h2 Заголовок h2
+                h3 Заголовок h3
+                .subtitle-1 Subtitle 1
+                .subtitle-2 Subtitle 2
+                p Main text (Semobold)
+                p
+                    strong Main text bold
+
+    section
+        .container
+            .mb-20
+                h2 Colors
+
+            ul.colors
+                li.bg-red
+                li.bg-yellow
+                li.bg-violet
+                li.bg-green
+                li.bg-white
+                li.bg-gray-light
+                li.bg-gray-text
+                li.bg-gray
+                li.bg-black
+
+    section
+        .container
+            .mb-20
+                h2 Icons
+
+                ul.icons
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--location')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--clock')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--phone')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--mail')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--whatsapp-black')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--tg-black')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--search')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--cart')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--dots')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--vk-black')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--youtube-black')
+                    li
+                        svg(width=24 height=24)
+                            use(xlink:href='/public/sprite.svg#angle--left')
+                    li
+                        svg(width=24 height=24)
+                            use(xlink:href='/public/sprite.svg#angle--right')
+                    li
+                        svg(width=24 height=24)
+                            use(xlink:href='/public/sprite.svg#angle--top')
+                    li
+                        svg(width=24 height=24)
+                            use(xlink:href='/public/sprite.svg#angle--bottom')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--filter')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--telegram')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--whatsapp')
+                    li
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--catalog')
+                    li
+                        svg(width=32 height=32 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--file')
+                    li
+                        svg(width=32 height=32 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--close')
+                    li
+                        svg(width=46 height=46 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--warehouse')
+                    li
+                        svg(width=46 height=46 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--delivery')
+                    li
+                        svg(width=46 height=46 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--quality')
+                    li
+                        svg(width=46 height=46 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--users')
+                    li
+                        svg(width=46 height=46 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--check')
+                    li
+                        svg(width=46 height=46 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--build')
+                    li
+                        svg(width=46 height=46 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--play')
+                    li
+                        svg(width=46 height=46 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--start-border')
+                    li
+                        svg(width=46 height=46)
+                            use(xlink:href='/public/sprite.svg#icon--start-fill')
+
+    section
+        .container
+            .mb-20
+                h2 Button
+
+                .buttons
+                    div
+                        div
+                            p Красная кнопка
+                            button.button.button-red В корзину
+
+                        div
+                            p Красная кнопка с иконкой
+                            button.button.button-red
+                                svg(width=24 height=24 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--cart')
+                                span В корзину
+
+                    div
+                        div
+                            p Красная кнопка заблокировано
+                            button(disabled).button.button-red В корзину
+                        div
+                            p Красная кнопка с иконкой заблокировано
+                            button(disabled).button.button-red
+                                svg(width=24 height=24 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--cart')
+                                span В корзину
+
+                    div
+                        div
+                            p Красная кнопка маленькая
+                            button.button.button-red.button-small В корзину
+
+                        div
+                            p Красная кнопка маленькая с иконкой
+                            button.button.button-red.button-small
+                                svg(width=24 height=24 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--cart')
+                                span В корзину
+
+                    div
+                        p Элемент меню
+                        nav.nav
+                            a(href='').catalog.button.button-red
+                                svg(width=24 height=24 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--catalog')
+                                span Каталог
+
+                    div
+                        p Серая кнопка
+                        button.button.button-gray Категория
+
+                    div
+                        p Корзина пустая
+                        .cart.button.button-gray
+                            svg(width=24 height=24 fill='none')
+                                use(xlink:href='/public/sprite.svg#icon--cart')
+
+                        div
+                            p Корзина со счетчиком
+                            .cart.button.button-gray
+                                svg(width=24 height=24 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--cart')
+                                span.counter 2
+
+                    div
+                        p Кнопка слайдера
+                        button.button.button-gray.swiper-button-prev
+                            svg(width=24 height=24)
+                                use(xlink:href='/public/sprite.svg#angle--left')
+                        button.button.button-gray.swiper-button-next
+                            svg(width=24 height=24)
+                                use(xlink:href='/public/sprite.svg#angle--right')
+
+                    div
+                        p Заголовки табов
+
+                        ul.tabs__caption
+                            li.active Статьи
+                            li Обзоры
+                            li Видео
+
+                p Пагинация
+                .pagination
+                    span.pagination__el 1
+                    a(href='').pagination__el 2
+                    a(href='').pagination__el 3
+                    a(href='').pagination__el.dots
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--dots')
+                    a(href='').pagination__el 11
+                    a(href='').pagination__el 12
+
+    .container
+        include ../views/components/main-categories
+
+    section
+        .container
+            .section__header.justify
+                h2 Слайдер с товарами
+
+                .slider-buttons
+                    .swiper-button-prev.button.button.button-gray.swiper-button-prev
+                        svg(width=24 height=24)
+                            use(xlink:href='/public/sprite.svg#angle--left')
+                    .swiper-button-next.button.button-gray.swiper-button-next
+                        svg(width=24 height=24)
+                            use(xlink:href='/public/sprite.svg#angle--right')
+
+            include ../views/components/products-slider
+
+    section.like
+        .container
+            .section__header.justify
+                h2 Горизонтальный слайдер с товарами
+
+                .slider-buttons
+                    .swiper-button-prev.button.button.button-gray.swiper-button-prev
+                        svg(width=24 height=24)
+                            use(xlink:href='/public/sprite.svg#angle--left')
+                    .swiper-button-next.button.button-gray.swiper-button-next
+                        svg(width=24 height=24)
+                            use(xlink:href='/public/sprite.svg#angle--right')
+
+
+            include ../views/components/products-slider-horisontal
+
+    .container
+        include ../views/components/steps
+
+        include ../views/components/about
+

@@ -1,0 +1,37 @@
+.categories__list
+  display: flex
+  flex-wrap: wrap
+  align-items: stretch
+  gap: 2rem
+
+  .category
+    display: flex
+    justify-content: center
+    align-items: center
+    width: calc((100% + 2rem) / 4 - 2rem)
+    background: $gray-light
+    border-radius: 2rem
+    position: relative
+
+    &:hover
+      .category__name
+        background: rgba(97,97,97,1)
+
+    &-l
+      width: calc((100% + 2rem) / 2 - 2rem)
+
+    &__name
+      @include transition
+      padding: .7rem 1rem
+      border-radius: 2rem
+      background: rgba(97,97,97,.5)
+      color: $white
+      position: absolute
+      z-index: 10
+      left: 3rem
+      bottom: 3rem
+
+    &__img
+      max-width: 95%
+      max-height: 95%
+      object-fit: cover

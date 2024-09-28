@@ -1,0 +1,198 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-catalog'
+
+block content
+    section
+        .section__header
+            ul.breadcrumbs
+                li.breadcrumbs__el
+                    a(href='') Главная
+                li.breadcrumbs__el
+                    span Каталог
+
+            h1.h2 Каталог
+
+        .catalog
+            .catalog__filter
+                details.details
+                    summary.details__header
+                        span Ноутбуки и ПК
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Системные блоки
+                            li.catalog__el
+                                a(href='') Ноутбуки для работы
+                            li.catalog__el
+                                a(href='') Ноутбуки игровые
+                            li.catalog__el
+                                a(href='') Ультрабуки
+                            li.catalog__el
+                                a(href='') Macbook
+                            li.catalog__el
+                                a(href='') Аксессуары для ноутбуков
+
+                details.details
+                    summary.details__header
+                        span Спорт и&nbsp;отдых
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+                details.details
+                    summary.details__header
+                        span Туризм
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+                details.details
+                    summary.details__header
+                        span Игровые приставки и&nbsp;VR
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+                details.details
+                    summary.details__header
+                        span Товары для авто
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+
+
+                details.details
+                    summary.details__header
+                        span Домашние развлечения
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+                details.details
+                    summary.details__header
+                        span Фото и&nbsp;видео
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+                details.details
+                    summary.details__header
+                        span Музыкальные инструменты
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+                details.details
+                    summary.details__header
+                        span Стройка и&nbsp;ремонт
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+                details.details
+                    summary.details__header
+                        span Детские товары
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+
+                details.details
+                    summary.details__header
+                        span Проекторы и&nbsp;TV
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+
+                details.details
+                    summary.details__header
+                        span Смартфоны и&nbsp;планшеты
+                    .details__content
+                        ul.catalog__list
+                            li.catalog__el
+                                a(href='') Пункт 1
+                            li.catalog__el
+                                a(href='') Пункт 2
+
+
+            .catalog__categories
+                .categories__list
+                    a(href='').category
+                        picture.category__img
+                            source(type='image/webp' srcset='/src/assets/images/img--category-1@2x.webp 2x, /src/assets/images/img--category-1.webp 1x')
+                            img(src='/src/assets/images/img--category-1@2x.png 2x, /src/assets/images/img--category-1.png 1x')
+
+                        span.category__name Палатки и спальники
+
+                    a(href='').category
+                        picture.category__img
+                            source(type='image/webp' srcset='/src/assets/images/img--category-2@2x.webp 2x, /src/assets/images/img--category-2.webp 1x')
+                            img(src='/src/assets/images/img--category-2@2x.png 2x, /src/assets/images/img--category-2.png 1x')
+
+                        span.category__name Велосипеды
+
+                    a(href='').category
+                        picture.category__img
+                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+
+                        span.category__name Игровые приставки и&nbsp;VR
+
+                    a(href='').category
+                        picture.category__img
+                            source(type='image/webp' srcset='/src/assets/images/img--category-4@2x.webp 2x, /src/assets/images/img--category-4.webp 1x')
+                            img(src='/src/assets/images/img--category-4@2x.png 2x, /src/assets/images/img--category-4.png 1x')
+
+                        span.category__name Стройинструменты
+
+                    a(href='').category
+                        picture.category__img
+                            source(type='image/webp' srcset='/src/assets/images/img--category-5@2x.webp 2x, /src/assets/images/img--category-5.webp 1x')
+                            img(src='/src/assets/images/img--category-5@2x.png 2x, /src/assets/images/img--category-5.png 1x')
+
+                        span.category__name Проекторы и&nbsp;TV
+
+                    a(href='').category
+                        picture.category__img
+                            source(type='image/webp' srcset='/src/assets/images/img--category-6@2x.webp 2x, /src/assets/images/img--category-6.webp 1x')
+                            img(src='/src/assets/images/img--category-6@2x.png 2x, /src/assets/images/img--category-6.png 1x')
+
+                        span.category__name Пылесосы, уборка и&nbsp;клининг
+
+
+    include ../views/components/seo-test
+    include ../views/components/about

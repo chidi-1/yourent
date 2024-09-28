@@ -1,0 +1,72 @@
+.footer
+  padding: 4rem 0 5rem
+  background: $gray-light
+
+  &__top
+    margin-bottom: 4rem
+
+    .justify
+      align-items: flex-start
+      gap: 4rem
+
+    .logo
+      width: 15.8rem
+
+      img
+        max-width: 100%
+
+      span
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 4.4rem
+        background: $gray
+
+  &__col
+    display: flex
+    flex-direction: column
+    gap: 2rem
+
+  .nav__list
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+    .nav__el
+      display: block
+
+      a
+        &:hover
+          color: $red
+
+  .social
+    display: flex
+    gap: 6px
+    background: $white
+    padding: 3rem
+    border-radius: 4.8rem
+
+    .button
+      padding: 0
+      color: $red
+      width: 3.2rem
+      height: 3.2rem
+      min-height: 3.2rem
+      border-radius: 1rem
+
+      &:hover
+        background: $red
+        color: $white
+
+  &__banks,
+  &__copyright
+    display: flex
+    align-items: center
+    gap: 2rem
+
+    *
+      color: $gray
+
+    a
+      &:hover
+        color: $red

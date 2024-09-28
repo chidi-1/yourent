@@ -1,0 +1,440 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-category'
+
+block content
+    section
+        .section__header
+            ul.breadcrumbs
+                li.breadcrumbs__el
+                    a(href='') Главная
+                li.breadcrumbs__el
+                    a(href='') Каталог
+                li.breadcrumbs__el
+                    a(href='') Товары для отдыха
+                li.breadcrumbs__el
+                    span Палатки
+
+            h1.h2 Палатки
+
+        .subcategories__list
+            a(href='').subcategory
+                .subcategory__img
+                    picture
+                        source(type='image/webp' srcset='/src/assets/images/img--category-1@2x.webp 2x, /src/assets/images/img--category-1.webp 1x')
+                        img(src='/src/assets/images/img--category-1@2x.png 2x, /src/assets/images/img--category-1.png 1x')
+
+                span.subcategory__name Палатки и спальники
+
+            a(href='').subcategory
+                .subcategory__img
+                    picture
+                        source(type='image/webp' srcset='/src/assets/images/img--category-2@2x.webp 2x, /src/assets/images/img--category-2.webp 1x')
+                        img(src='/src/assets/images/img--category-2@2x.png 2x, /src/assets/images/img--category-2.png 1x')
+
+                span.subcategory__name Велосипеды
+
+            a(href='').subcategory
+                .subcategory__img
+                    picture
+                        source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                        img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+
+                span.subcategory__name Игровые приставки и&nbsp;VR
+
+            a(href='').subcategory
+                .subcategory__img
+                    picture
+                        source(type='image/webp' srcset='/src/assets/images/img--category-4@2x.webp 2x, /src/assets/images/img--category-4.webp 1x')
+                        img(src='/src/assets/images/img--category-4@2x.png 2x, /src/assets/images/img--category-4.png 1x')
+
+                span.subcategory__name Стройинструменты
+
+            a(href='').subcategory
+                .subcategory__img
+                    picture
+                        source(type='image/webp' srcset='/src/assets/images/img--category-5@2x.webp 2x, /src/assets/images/img--category-5.webp 1x')
+                        img(src='/src/assets/images/img--category-5@2x.png 2x, /src/assets/images/img--category-5.png 1x')
+
+                span.subcategory__name Проекторы и&nbsp;TV
+
+            a(href='').subcategory
+                .subcategory__img
+                    picture
+                        source(type='image/webp' srcset='/src/assets/images/img--category-6@2x.webp 2x, /src/assets/images/img--category-6.webp 1x')
+                        img(src='/src/assets/images/img--category-6@2x.png 2x, /src/assets/images/img--category-6.png 1x')
+
+                span.subcategory__name Пылесосы, уборка и&nbsp;клининг
+
+            a(href='').subcategory
+                .subcategory__img
+                    picture
+                        source(type='image/webp' srcset='/src/assets/images/img--category-6@2x.webp 2x, /src/assets/images/img--category-6.webp 1x')
+                        img(src='/src/assets/images/img--category-6@2x.png 2x, /src/assets/images/img--category-6.png 1x')
+
+                span.subcategory__name Пылесосы, уборка и&nbsp;клининг
+
+    include ../views/components/seo-test
+
+    section
+        .filter
+            .filter__title
+                svg(width=24 height=24 fill='none')
+                    use(xlink:href='/public/sprite.svg#icon--filter')
+                span Фильтры
+
+            .filter__el
+                // если при клике на селект нужно перейти по ссылке, сам url нужно передать в data-url для option
+                select.js--select-style
+                    option(selected) По цене (↑)
+                    option(data-url='https://ya.ru/') По цене (↓)
+
+            .filter__el
+                select.js--select-style
+                    option(selected) По доступности
+                    option(data-url='') Параметр 2
+
+
+        h2 Палатки
+
+        .row.row-4
+            .product
+                .product__images
+                    .tabs
+                        ul.tabs__caption
+                            li.active
+                            li
+
+                        .tabs__content.active
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .tabs__content
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                .product__content
+                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                    span.product__available.c-green Доступно к аренде
+                    .product__price
+                        span.product__percent -22%
+                        span.product__value 600
+                            =" "
+                            small ₽/месяц
+                        span.product__discount 500 ₽
+                    span.product__permonth 5600
+                        =" "
+                        small ₽/месяц
+                    span.product__deposit Залог 101.500 ₽
+                    button.button.button-red.button-small
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--cart')
+                        span В корзину
+            .product
+                .product__images
+                    .tabs
+                        ul.tabs__caption
+                            li.active
+                            li
+
+                        .tabs__content.active
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .tabs__content
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                .product__content
+                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                    span.product__available.c-green Доступно к аренде
+                    .product__price
+                        span.product__percent -22%
+                        span.product__value 600
+                            =" "
+                            small ₽/месяц
+                        span.product__discount 500 ₽
+                    span.product__permonth 5600
+                        =" "
+                        small ₽/месяц
+                    span.product__deposit Залог 101.500 ₽
+                    button.button.button-red.button-small
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--cart')
+                        span В корзину
+            .product
+                .product__images
+                    .tabs
+                        ul.tabs__caption
+                            li.active
+                            li
+
+                        .tabs__content.active
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .tabs__content
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                .product__content
+                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                    span.product__available.c-green Доступно к аренде
+                    .product__price
+                        span.product__percent -22%
+                        span.product__value 600
+                            =" "
+                            small ₽/месяц
+                        span.product__discount 500 ₽
+                    span.product__permonth 5600
+                        =" "
+                        small ₽/месяц
+                    span.product__deposit Залог 101.500 ₽
+                    button.button.button-red.button-small
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--cart')
+                        span В корзину
+            .product
+                .product__images
+                    .tabs
+                        ul.tabs__caption
+                            li.active
+                            li
+
+                        .tabs__content.active
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .tabs__content
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                .product__content
+                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                    span.product__available.c-green Доступно к аренде
+                    .product__price
+                        span.product__percent -22%
+                        span.product__value 600
+                            =" "
+                            small ₽/месяц
+                        span.product__discount 500 ₽
+                    span.product__permonth 5600
+                        =" "
+                        small ₽/месяц
+                    span.product__deposit Залог 101.500 ₽
+                    button.button.button-red.button-small
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--cart')
+                        span В корзину
+
+
+
+        h2 Рюкзаки
+
+        .row.row-4
+            .product
+                .product__images
+                    .tabs
+                        ul.tabs__caption
+                            li.active
+                            li
+
+                        .tabs__content.active
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .tabs__content
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                .product__content
+                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                    span.product__available.c-green Доступно к аренде
+                    .product__price
+                        span.product__percent -22%
+                        span.product__value 600
+                            =" "
+                            small ₽/месяц
+                        span.product__discount 500 ₽
+                    span.product__permonth 5600
+                        =" "
+                        small ₽/месяц
+                    span.product__deposit Залог 101.500 ₽
+                    button.button.button-red.button-small
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--cart')
+                        span В корзину
+            .product
+                .product__images
+                    .tabs
+                        ul.tabs__caption
+                            li.active
+                            li
+
+                        .tabs__content.active
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .tabs__content
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                .product__content
+                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                    span.product__available.c-green Доступно к аренде
+                    .product__price
+                        span.product__percent -22%
+                        span.product__value 600
+                            =" "
+                            small ₽/месяц
+                        span.product__discount 500 ₽
+                    span.product__permonth 5600
+                        =" "
+                        small ₽/месяц
+                    span.product__deposit Залог 101.500 ₽
+                    button.button.button-red.button-small
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--cart')
+                        span В корзину
+            .product
+                .product__images
+                    .tabs
+                        ul.tabs__caption
+                            li.active
+                            li
+
+                        .tabs__content.active
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .tabs__content
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                .product__content
+                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                    span.product__available.c-green Доступно к аренде
+                    .product__price
+                        span.product__percent -22%
+                        span.product__value 600
+                            =" "
+                            small ₽/месяц
+                        span.product__discount 500 ₽
+                    span.product__permonth 5600
+                        =" "
+                        small ₽/месяц
+                    span.product__deposit Залог 101.500 ₽
+                    button.button.button-red.button-small
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--cart')
+                        span В корзину
+            .product
+                .product__images
+                    .tabs
+                        ul.tabs__caption
+                            li.active
+                            li
+
+                        .tabs__content.active
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .tabs__content
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                .product__content
+                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                    span.product__available.c-green Доступно к аренде
+                    .product__price
+                        span.product__percent -22%
+                        span.product__value 600
+                            =" "
+                            small ₽/месяц
+                        span.product__discount 500 ₽
+                    span.product__permonth 5600
+                        =" "
+                        small ₽/месяц
+                    span.product__deposit Залог 101.500 ₽
+                    button.button.button-red.button-small
+                        svg(width=24 height=24 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--cart')
+                        span В корзину
+
+
+
+        .pagination
+            span.pagination__el 1
+            a(href='').pagination__el 2
+            a(href='').pagination__el 3
+            a(href='').pagination__el.dots
+                svg(width=24 height=24 fill='none')
+                    use(xlink:href='/public/sprite.svg#icon--dots')
+            a(href='').pagination__el 11
+            a(href='').pagination__el 12
+
+    include ../views/components/often
+
+    include ../views/components/viewed
+
+    include ../views/components/review
+
+    section
+        h2 Часто задаваемые вопросы
+
+        .faq
+            details(open).seo-text
+                summary
+                    span.subtitle-2.c-red Можно ли приехать в офис без оформления заказа на ареду палаток?
+
+                .details__content
+                    p  Будем рады видеть вас в&nbsp;нашем офисе. Предупредите заранее о&nbsp;своем приезде. Но&nbsp;учтите, что в&nbsp;сезон большая часть снаряжения забронирована, а&nbsp;значит мы&nbsp;не&nbsp;сможем вам гарантировать наличие вещей.
+
+            details.seo-text
+                summary
+                    span.subtitle-2.c-red Можно ли приехать в офис без оформления заказа на ареду палаток?
+
+                .details__content
+                    p  Будем рады видеть вас в&nbsp;нашем офисе. Предупредите заранее о&nbsp;своем приезде. Но&nbsp;учтите, что в&nbsp;сезон большая часть снаряжения забронирована, а&nbsp;значит мы&nbsp;не&nbsp;сможем вам гарантировать наличие вещей.
+
+            details.seo-text
+                summary
+                    span.subtitle-2.c-red Можно ли приехать в офис без оформления заказа на ареду палаток?
+
+                .details__content
+                    p  Будем рады видеть вас в&nbsp;нашем офисе. Предупредите заранее о&nbsp;своем приезде. Но&nbsp;учтите, что в&nbsp;сезон большая часть снаряжения забронирована, а&nbsp;значит мы&nbsp;не&nbsp;сможем вам гарантировать наличие вещей.
+
+            details.seo-text
+                summary
+                    span.subtitle-2.c-red Можно ли приехать в офис без оформления заказа на ареду палаток?
+
+                .details__content
+                    p  Будем рады видеть вас в&nbsp;нашем офисе. Предупредите заранее о&nbsp;своем приезде. Но&nbsp;учтите, что в&nbsp;сезон большая часть снаряжения забронирована, а&nbsp;значит мы&nbsp;не&nbsp;сможем вам гарантировать наличие вещей.
+
+    section
+        .seo-text
+            h3  Арендуй с&nbsp;умом: Что стоит взять в&nbsp;аренду для идеального путешествия?
+            p Путешествия&nbsp;&mdash; это отличный способ исследовать мир, но&nbsp;часто подготовка к&nbsp;ним может быть дорогостоящей. Вместо того чтобы покупать снаряжение, которое вы&nbsp;используете лишь несколько раз, аренда может стать идеальным решением. На&nbsp;YouRent.me вы&nbsp;можете арендовать всё&nbsp;&mdash; от&nbsp;палаток до&nbsp;велосипедов и&nbsp;даже чемоданов. Это не&nbsp;только помогает сэкономить, но&nbsp;и&nbsp;позволяет путешествовать налегке, без лишнего груза. Арендуя оборудование, вы&nbsp;можете выбирать только самое лучшее и&nbsp;самое подходящее для вашего маршрута. В&nbsp;итоге, ваши путешествия станут более комфортными и&nbsp;экономичными.
+            h3 Инструменты в&nbsp;аренду: Как сделать ремонт без лишних затрат?
+            p Ремонт&nbsp;&mdash; это дело затратное, особенно когда речь идет о&nbsp;покупке дорогостоящих инструментов, которые вам понадобятся всего один или два раза. Аренда инструментов&nbsp;&mdash; это разумный способ сэкономить деньги и&nbsp;время. На&nbsp;YouRent.me вы&nbsp;найдете широкий ассортимент инструментов, от&nbsp;дрелей до&nbsp;строительных лесов, которые можно арендовать на&nbsp;нужный срок. Это также помогает избежать захламления дома ненужными вещами после завершения ремонта. К&nbsp;тому&nbsp;же, арендуя профессиональные инструменты, вы&nbsp;обеспечиваете качество работы и&nbsp;безопасность. В&nbsp;результате, ремонт пройдет гладко и&nbsp;без лишних трат.
+            h3 Аренда для вечеринок: Как организовать незабываемый вечер без лишних хлопот?
+            p Организация вечеринки требует массы усилий, особенно если вы&nbsp;хотите удивить своих гостей чем-то необычным. Вместо того чтобы тратить деньги на&nbsp;покупку оборудования, которое понадобится только один раз, лучше арендовать всё необходимое. На&nbsp;YouRent.me вы&nbsp;найдете всё&nbsp;&mdash; от&nbsp;звукового оборудования и&nbsp;световых установок до&nbsp;карнавальных костюмов и&nbsp;фотобудок. Это позволяет легко создать атмосферу праздника и&nbsp;добавить элементы, которые сделают ваше мероприятие уникальным. Кроме того, аренда помогает избежать ненужных трат и&nbsp;проблем с&nbsp;хранением громоздких вещей. В&nbsp;результате, ваша вечеринка пройдет на&nbsp;высшем уровне, а&nbsp;вы&nbsp;сможете сосредоточиться на&nbsp;развлечениях, а&nbsp;не&nbsp;на&nbsp;организации.
+
+    include ../views/components/media

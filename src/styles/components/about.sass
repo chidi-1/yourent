@@ -1,0 +1,36 @@
+.about
+  &__content
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    border-radius: 2rem
+    border: 2px solid $gray-light
+    overflow: hidden
+    position: relative
+
+    &:after
+      position: absolute
+      content: ""
+      width: 207px
+      height: 207px
+      border-radius: 100%
+      background: $red
+      right: 0
+      top: 0
+      transform: translate(50%, -50%)
+
+  &__text
+    width: 50%
+    padding: 3rem 2rem
+    background: $gray-light
+
+  &__img
+    width: 50%
+    display: inline-flex
+    align-items: center
+    justify-content: center
+
+    picture,
+    img
+      max-width: 95%
+      max-height: 95%

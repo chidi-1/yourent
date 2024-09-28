@@ -1,0 +1,267 @@
+.header
+  &__alert
+    background: $gray-light
+    padding: 1rem 0
+    text-align: center
+
+  &__top
+    padding: 2rem 0
+    border-bottom: 1px solid $gray
+
+    .info,
+    .contacts
+      display: inline-flex
+      align-items: center
+      gap: 1.2rem
+
+    .info
+      &__el
+        display: inline-flex
+        align-items: center
+        gap: .6rem
+
+        svg
+          color: $gray
+
+        span
+          color: $black
+
+          @include tablet
+            max-width: 16rem
+
+        .location
+          position: relative
+
+          &:hover
+            .location__list
+              opacity: 1
+              pointer-events: auto
+
+          &__list
+            position: absolute
+            right: auto
+            left: 0
+            min-width: 100%
+            width: auto
+            top: 2.4rem
+            background: $white
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
+            opacity: 0
+            pointer-events: none
+
+            &__el
+              display: block
+              padding: .5rem 1rem
+
+              a
+                display: block
+
+    .contacts
+      &__el
+        display: inline-flex
+        align-items: center
+        gap: .6rem
+
+        svg
+          color: $gray
+
+        span
+          color: $red
+
+          @include tablet
+            display: none
+
+      .phone
+        @include subtitle1
+
+      .social
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $gray-light
+        width: 3.2rem
+        height: 3.2rem
+        border-radius: 1rem
+
+  &__bottom
+    padding: 1.2rem 0 3.2rem
+    display: flex
+    flex-direction: column
+    gap: 2rem
+
+  &__links
+    @include tablet
+      position: relative
+      padding-bottom: 5rem
+
+  &__navigation
+    display: flex
+    align-items: center
+    gap: 2rem
+
+    @include netbook
+      gap: 1rem
+    @include tablet
+      gap: 2rem
+
+    .logo
+      width: 15.8rem
+
+      img
+        max-width: 100%
+
+      span
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 4.4rem
+        background: $gray
+
+    .button.catalog
+      font-size: 1.6rem
+      gap: .4rem
+
+      &:hover,
+      &:focus
+        background: $gray-light
+        border: 2px solid $gray-light
+        color: $red
+
+    .nav__list
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 2rem
+
+      @include netbook
+        gap: 1rem
+
+      @include tablet
+        gap: 2rem
+        position: absolute
+        left: 2rem
+        right: 2rem
+        bottom: 0
+        background: $gray-light
+        height: 3.9rem
+
+      .nav__el
+        display: inline-block
+
+        a
+          @include subtitle2
+          @include transition
+
+          @include netbook
+            font-size: 1.6rem
+
+          &:hover
+            color: $red
+
+  &__control
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 2rem
+
+    @include tablet
+      gap: 1rem
+
+    .search
+      position: relative
+
+      .button
+        width: 3.2rem
+        height: 3.2rem
+        min-height: 3.2rem
+        border-radius: 1rem
+        padding: 0
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        color: $gray
+
+        &:hover
+          color: $red
+
+        &:active
+          color: $white
+
+        &.search__clear
+          left: 1rem
+          display: none
+
+        &.search__icon
+          right: 1rem
+
+        svg
+          width: 2.4rem
+          height: 2.4rem
+
+      input
+        background: transparent
+        outline: none
+        @include subtitle2
+        padding: 1rem
+        border: 2px solid $gray-light
+        border-radius: 2rem
+
+        @include tablet
+          width: 34rem
+
+        &::placeholder
+          color: $gray
+
+        &:focus
+          border: 2px solid $red
+
+          &::placeholder
+            opacity: 0
+
+    .button.cart
+      color: $gray
+      min-width: 7.4rem
+
+      &:hover,
+      &:focus
+        color: $red
+
+      &:active
+        background: $gray-light !important
+        border-color: $gray-light !important
+
+        svg
+          color: $gray
+
+      .counter
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        padding: 0 2px
+        width: 2.4rem
+        height: 2.4rem
+        background: $red
+        color: $white
+        border-radius: 100%
+
+  &__categories
+    @include tablet
+      overflow: auto
+
+    .categories__list
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      gap: 1.5rem
+
+    .button
+      min-height: 3.9rem
+      font-size: 1.4rem
+
+      @include tablet
+        flex-wrap: nowrap
+        white-space: nowrap
+
+      &.more
+        width: 4.4rem
+        height: 3.9rem

@@ -1,0 +1,43 @@
+.choices
+  margin-bottom: 0
+  position: relative
+
+  &[data-type*=select-one]
+    &::after
+      border: none
+      width: 2.4rem
+      height: 2.4rem
+      border-radius: 100%
+      background: $white url('/public/sprite.svg#angle--bottom-red-view') no-repeat 50% 50%
+      background-size: 2rem 2rem !important
+      margin: 0 !important
+      top: 2.2rem
+      transform: translateY(-50%)
+      @include transition
+
+    &.is-open
+      &:after
+        transform:  translateY(-50%) rotate(180deg)
+
+  &__inner
+    background: $gray-light
+    padding: 1rem
+    border-radius: 2rem !important
+    border: none
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .choices__list--single
+      padding-right: 3.5rem
+
+  &__list--dropdown
+    border-radius: 2rem !important
+
+    .choices__item
+      padding-right: 0 !important
+
+      &:before,
+      &:after
+        display: none !important
+

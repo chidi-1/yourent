@@ -1,0 +1,32 @@
+.steps
+  &__list
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    gap: 2rem
+
+.step
+  padding: 2.75rem 2rem
+  border-radius: 2rem
+  background: $gray-light
+  display: flex
+  gap: 1rem
+  width: calc((100% + 2rem)/3 - 2rem)
+
+  &-l
+    width: calc(50% - 1rem)
+
+  &__number
+    font-size: 9.6rem
+    line-height: 1
+    color: $pink
+    font-weight: 700
+
+  &__text
+    padding-top: 1rem
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+    p
+      color: $gray-text

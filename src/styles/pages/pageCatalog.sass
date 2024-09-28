@@ -1,0 +1,59 @@
+.catalog
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+
+  &__filter
+    background: $gray-light
+    border-radius: 2rem
+    padding: 3rem 2rem
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    width: 30rem
+
+    details
+      summary
+        & > *
+          color: $gray-text
+
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    padding-top: 1rem
+
+    li
+      display: block
+      padding-left: 2rem
+      position: relative
+
+      &:before
+        position: absolute
+        content: ""
+        top: 1rem
+        left: .8rem
+        width: 4px
+        height: 4px
+        border-radius: 100%
+        background: $gray-text
+        transform: translate(-50%,-50%)
+
+      a
+        color: $gray-text
+        @include transition
+
+        &:hover
+          color: $red
+
+  &__categories
+    width: calc(100% - 32rem)
+
+    .categories__list
+      .category
+        width: calc((100% + 2rem) / 3 - 2rem)
+
+        &__name
+          left: 2rem
+          bottom: 2rem
+

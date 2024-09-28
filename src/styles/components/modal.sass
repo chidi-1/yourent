@@ -1,0 +1,34 @@
+.fancybox__content
+  background: $gray-light !important
+  padding: 2rem !important
+  border-radius: 2rem
+
+.modal
+  .f-button
+    width: 3.6rem
+    height: 3.6rem
+    min-height: 3.6rem
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $white
+    border-radius: 100%
+    padding: 0
+
+    svg
+      path
+        stroke: $red
+
+.modal.item
+  width: 100%
+  max-width: 67rem
+
+  .params__container
+    padding: 0
+
+  .params__list
+    padding-right: 1rem
+    max-height: calc(100vh - 200px)
+    overflow: auto
+    scrollbar-width: thin
+    scrollbar-color: $gray-text transparent

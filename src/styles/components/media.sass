@@ -1,0 +1,32 @@
+.media
+  display: flex
+  flex-direction: column
+  border-radius: 2rem
+  overflow: hidden
+  background: $gray-light
+
+  &:hover
+    .subtitle-1
+      color: $red
+
+  &__img
+    height: 164px
+    overflow: hidden
+
+    source,
+    img
+      min-width: 100%
+      min-height: 100%
+      object-fit: cover
+
+  &__content
+    padding: 2rem
+    display: flex
+    flex-direction: column
+    gap: 2.5rem
+
+  .subtitle-1
+    @include transition
+
+  .subtitle-2
+    color: $gray-text

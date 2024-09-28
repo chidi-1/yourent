@@ -1,0 +1,92 @@
+button,
+.button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  gap: 1rem
+  padding: 1rem
+  @include transition
+  cursor: pointer
+  text-decoration: none
+  border-radius: 2.2rem
+  @include font-params(1.8rem, 1.2, 600)
+  min-height: 4.2rem
+
+  &.button-small
+    padding: .5rem 1rem
+    font-size: 1.6rem
+    min-height: 2.9rem
+
+  &.button-yellow
+    background: $yellow
+
+  &.button-border-red
+    border: 2px solid $red
+    color: $red
+
+    &:hover,
+    &:focus
+      background: $pink
+      color: $red
+
+    &:active,
+    &:disabled,
+    &.disabled
+      color: $red
+      background: $pink
+      border: 2px solid $pink
+
+    &:disabled,
+    &.disabled
+      cursor: default
+      pointer-events: none
+
+  &.button-red
+    background: $red
+    border: 2px solid $red
+    color: $white
+
+    &:hover,
+    &:focus
+      background: $white
+      color: $red
+
+    &:active,
+    &:disabled,
+    &.disabled
+      color: $red
+      background: $pink
+      border: 2px solid $pink
+
+    &:disabled,
+    &.disabled
+      cursor: default
+      pointer-events: none
+
+  &.button-gray
+    background: $gray-light
+    border: 2px solid $gray-light
+    color: $black
+
+    &:hover,
+    &:focus
+      color: $red
+
+    &:active,
+    &:disabled,
+    &.disabled
+      color: $white
+      background: $red
+      border: 2px solid $red
+
+
+    &:disabled,
+    &.disabled
+      cursor: default
+      pointer-events: none
+
+  //&:hover
+  //&:active
+  //&.disabled,
+  //&:disabled
+

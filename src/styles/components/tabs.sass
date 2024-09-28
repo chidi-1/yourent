@@ -1,0 +1,30 @@
+.tabs
+  &__caption
+    background: $gray-light
+    border-radius: 2rem
+    display: flex
+    align-items: flex-start
+    gap: 2rem
+    padding: 1rem
+
+    li
+      padding: 1rem 2rem
+      border-radius: 2.2rem
+      @include transition
+      border: 2px solid transparent
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      @include font-params(1.8rem, 1.2, 600)
+      cursor: pointer
+
+      &.active
+        border: 2px solid $red
+        color: $red
+        cursor: default
+
+      &:hover
+        color: $red
+
+  &__content:not(.active)
+    display: none

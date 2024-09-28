@@ -1,0 +1,373 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-item'
+
+block content
+    section
+        .section__header
+            ul.breadcrumbs
+                li.breadcrumbs__el
+                    a(href='') Главная
+                li.breadcrumbs__el
+                    a(href='') Каталог
+                li.breadcrumbs__el
+                    a(href='') Товары для отдыха
+                li.breadcrumbs__el
+                    a(href='') Палатки
+                li.breadcrumbs__el
+                    span Палатка двухместная Dallas 2
+
+        .item
+            .row.row-2
+                .images
+                    .swiper.swiper-images.js--item-photos
+                        .swiper-wrapper
+                            .swiper-slide
+                                a(href='/src/assets/images/img--category-1@2x.png' data-fancybox='Палатка двухместная Dallas 2').photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-1@2x.webp 2x, /src/assets/images/img--category-1.webp 1x')
+                                        img(src='/src/assets/images/img--category-1@2x.png 2x, /src/assets/images/img--category-1.png 1x')
+                            .swiper-slide
+                                a(href='/src/assets/images/img--category-2@2x.png' data-fancybox='Палатка двухместная Dallas 2').photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-2@2x.webp 2x, /src/assets/images/img--category-2.webp 1x')
+                                        img(src='/src/assets/images/img--category-2@2x.png 2x, /src/assets/images/img--category-2.png 1x')
+                            .swiper-slide
+                                a(href='/src/assets/images/img--category-3@2x.png' data-fancybox='Палатка двухместная Dallas 2').photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                        img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                            .swiper-slide
+                                a(href='/src/assets/images/img--category-1@2x.png' data-fancybox='Палатка двухместная Dallas 2').photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-1@2x.webp 2x, /src/assets/images/img--category-1.webp 1x')
+                                        img(src='/src/assets/images/img--category-1@2x.png 2x, /src/assets/images/img--category-1.png 1x')
+                            .swiper-slide
+                                a(href='/src/assets/images/img--category-2@2x.png' data-fancybox='Палатка двухместная Dallas 2').photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-2@2x.webp 2x, /src/assets/images/img--category-2.webp 1x')
+                                        img(src='/src/assets/images/img--category-2@2x.png 2x, /src/assets/images/img--category-2.png 1x')
+                            .swiper-slide
+                                a(href='/src/assets/images/img--category-3@2x.png' data-fancybox='Палатка двухместная Dallas 2').photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                        img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                            .swiper-slide
+                                a(href='/src/assets/images/img--category-1@2x.png' data-fancybox='Палатка двухместная Dallas 2').photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-1@2x.webp 2x, /src/assets/images/img--category-1.webp 1x')
+                                        img(src='/src/assets/images/img--category-1@2x.png 2x, /src/assets/images/img--category-1.png 1x')
+                            .swiper-slide
+                                a(href='/src/assets/images/img--category-2@2x.png' data-fancybox='Палатка двухместная Dallas 2').photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-2@2x.webp 2x, /src/assets/images/img--category-2.webp 1x')
+                                        img(src='/src/assets/images/img--category-2@2x.png 2x, /src/assets/images/img--category-2.png 1x')
+                            .swiper-slide
+                                a(href='/src/assets/images/img--category-3@2x.png' data-fancybox='Палатка двухместная Dallas 2').photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                        img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+
+                        .swiper-button-prev.button.button.button-gray.swiper-button-prev
+                            svg(width=24 height=24)
+                                use(xlink:href='/public/sprite.svg#angle--left')
+                        .swiper-button-next.button.button-gray.swiper-button-next
+                            svg(width=24 height=24)
+                                use(xlink:href='/public/sprite.svg#angle--right')
+
+                    .swiper.swiper-thumbs.js--item-thumbs
+                        .swiper-wrapper
+                            .swiper-slide
+                                .photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-1@2x.webp 2x, /src/assets/images/img--category-1.webp 1x')
+                                        img(src='/src/assets/images/img--category-1@2x.png 2x, /src/assets/images/img--category-1.png 1x')
+                            .swiper-slide
+                                .photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-2@2x.webp 2x, /src/assets/images/img--category-2.webp 1x')
+                                        img(src='/src/assets/images/img--category-2@2x.png 2x, /src/assets/images/img--category-2.png 1x')
+                            .swiper-slide
+                                .photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                        img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+
+                            .swiper-slide
+                                .photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-1@2x.webp 2x, /src/assets/images/img--category-1.webp 1x')
+                                        img(src='/src/assets/images/img--category-1@2x.png 2x, /src/assets/images/img--category-1.png 1x')
+                            .swiper-slide
+                                .photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-2@2x.webp 2x, /src/assets/images/img--category-2.webp 1x')
+                                        img(src='/src/assets/images/img--category-2@2x.png 2x, /src/assets/images/img--category-2.png 1x')
+                            .swiper-slide
+                                .photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                        img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+
+                            .swiper-slide
+                                .photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-1@2x.webp 2x, /src/assets/images/img--category-1.webp 1x')
+                                        img(src='/src/assets/images/img--category-1@2x.png 2x, /src/assets/images/img--category-1.png 1x')
+                            .swiper-slide
+                                .photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-2@2x.webp 2x, /src/assets/images/img--category-2.webp 1x')
+                                        img(src='/src/assets/images/img--category-2@2x.png 2x, /src/assets/images/img--category-2.png 1x')
+                            .swiper-slide
+                                .photo
+                                    picture.photo__img
+                                        source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                        img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+
+                .info
+                    .tags
+                        a(href='').tag.c-red Товары для отдыха
+                        a(href='').tag.c-violet Палатки
+                        a(href='').tag.c-green Туристическое снаряжение
+
+                    .info__text
+                        h1.h3 Палатка двухместная автоматическая серая Dallas&nbsp;2
+
+                        .info__prices
+                            .price.day
+                                span.price__percent -22%
+                                span.price__value
+                                    small До
+                                    = " "
+                                    | 600
+                                    =" "
+                                    small ₽/сутки
+                                span.price__discount 500 ₽
+
+                            .price.month
+                                span.price__percent -22%
+                                span.price__value.c-red
+                                    small До
+                                    = " "
+                                    | 3000
+                                    =" "
+                                    small ₽/сутки
+                                span.price__discount 5000 ₽
+
+                        button().button.button-red
+                            svg(width=24 height=24 fill='none')
+                                use(xlink:href='/public/sprite.svg#icon--cart')
+                            span В корзину
+
+                        button(disabled).button.button-red
+                            svg(width=24 height=24 fill='none')
+                                use(xlink:href='/public/sprite.svg#icon--cart')
+                            span В корзину
+
+                        p.c-green
+                            strong Доступно к аренде
+                        p.c-red
+                            strong Скоро появится
+                        p.c-violet
+                            strong Доступно с 25 мая
+
+                        p.c-gray  Чтобы выбрать даты аренды и&nbsp;рассчитать стоимость добавить товар в&nbsp;корзину и&nbsp;перейдите в&nbsp;неё
+
+                .description
+                    .description__crop-text
+                        p.c-gray Автоматическая двухместная палатка Dallas 2&nbsp;в сером цвете&nbsp;&mdash; это идеальное решение для тех, кто ценит комфорт и&nbsp;простоту в&nbsp;организации кемпинга или туристического похода. Ее&nbsp;главная особенность&nbsp;&mdash; система автоматической сборки, благодаря которой установка палатки занимает считанные минуты. Вам не&nbsp;нужно тратить время на&nbsp;разбор схемы или сложную установку&nbsp;&mdash; достаточно разложить палатку, и&nbsp;она сама примет нужную форму. Это особенно удобно в&nbsp;непредсказуемых погодных условиях, когда скорость и&nbsp;легкость установки имеют решающее значение.
+                        p.c-gray Палатка изготовлена из&nbsp;высококачественных материалов, которые обеспечивают надежную защиту от&nbsp;неблагоприятных погодных условий. Водонепроницаемая ткань предотвращает проникновение дождя, а&nbsp;прочная конструкция палатки устойчива к&nbsp;порывам ветра, что делает ее&nbsp;подходящей для использования в&nbsp;различных климатических условиях. Серая расцветка придает палатке стильный, сдержанный вид, который гармонично впишется в&nbsp;природные пейзажи..
+                        p.c-gray Внутреннее пространство палатки Dallas 2&nbsp;рассчитано на&nbsp;комфортное размещение двух человек. Благодаря оптимальным размерам, она обеспечивает
+                        p.c-gray Автоматическая двухместная палатка Dallas 2&nbsp;в сером цвете&nbsp;&mdash; это идеальное решение для тех, кто ценит комфорт и&nbsp;простоту в&nbsp;организации кемпинга или туристического похода. Ее&nbsp;главная особенность&nbsp;&mdash; система автоматической сборки, благодаря которой установка палатки занимает считанные минуты. Вам не&nbsp;нужно тратить время на&nbsp;разбор схемы или сложную установку&nbsp;&mdash; достаточно разложить палатку, и&nbsp;она сама примет нужную форму. Это особенно удобно в&nbsp;непредсказуемых погодных условиях, когда скорость и&nbsp;легкость установки имеют решающее значение.
+                        p.c-gray Палатка изготовлена из&nbsp;высококачественных материалов, которые обеспечивают надежную защиту от&nbsp;неблагоприятных погодных условий. Водонепроницаемая ткань предотвращает проникновение дождя, а&nbsp;прочная конструкция палатки устойчива к&nbsp;порывам ветра, что делает ее&nbsp;подходящей для использования в&nbsp;различных климатических условиях. Серая расцветка придает палатке стильный, сдержанный вид, который гармонично впишется в&nbsp;природные пейзажи..
+                        p.c-gray Внутреннее пространство палатки Dallas 2&nbsp;рассчитано на&nbsp;комфортное размещение двух человек. Благодаря оптимальным размерам, она обеспечивает
+
+                    span(data-show='Подробнее' data-hide='Свернуть').show-more.c-red.js--toggle-description Подробнее
+
+                .params
+                    h3 Основные характеристики
+
+                    .params__container
+                        ul.params__list
+                            li
+                                span.name Вместительность
+                                span.value 2 человека
+                            li
+                                span.name Водостойкость тента
+                                span.value 2000 мм в. ст
+                            li
+                                span.name Количество слоев
+                                span.value 2
+                            li
+                                span.name Вес
+                                span.value 2.3 кг
+                            li
+                                span.name Материал каркаса
+                                span.value Стеклопластик
+                            li
+                                span.name Материал каркаса
+                                span.value Стеклопластик
+                            li
+                                span.name Материал каркаса
+                                span.value Стеклопластик
+
+                        button(data-fancybox data-src='#params-modal').button.button-red.button-small Показать все
+
+                .use
+                    h3 Доставка и&nbsp;самовывоз
+
+                    ul.use__list
+                        li.use__el
+                            .use__icon
+                                svg(width=46 height=46 fill='none').c-red
+                                    use(xlink:href='/public/sprite.svg#icon--build')
+                            p.use__text Забрать сегодня из&nbsp;шоу-рума г. Москва, ул. Полбина д.&nbsp;3&nbsp;ст3
+
+                        li.use__el
+                            .use__icon
+                                svg(width=46 height=46 fill='none').c-red
+                                    use(xlink:href='/public/sprite.svg#icon--delivery')
+                            p.use__text Доставим сегодня
+                                =" "
+                                span.c-red бесплатно
+
+                .use
+                    h3 Как вернуть
+
+                    ul.use__list
+                        li.use__el
+                            .use__icon
+                                svg(width=46 height=46 fill='none').c-red
+                                    use(xlink:href='/public/sprite.svg#icon--build')
+                            p.use__text Вернуть самостоятельно в&nbsp;наш шоу-рум
+
+                        li.use__el
+                            .use__icon
+                                svg(width=46 height=46 fill='none').c-red
+                                    use(xlink:href='/public/sprite.svg#icon--delivery')
+                            p.use__text Наш курьер заберёт у&nbsp;вас
+                                =" "
+                                span.c-red от&nbsp;199&nbsp;₽
+
+                .structure
+                    ul.structure__caption
+                        li.active Комплект
+                        li(data-fancybox data-src='#params-modal') Инструкция
+
+                    .structure__content
+                        .section__header.justify
+                            h3 Что входит в комплект?
+
+                            .slider-buttons
+                                .swiper-button-prev.button.button.button-gray.swiper-button-prev
+                                    svg(width=24 height=24)
+                                        use(xlink:href='/public/sprite.svg#angle--left')
+                                .swiper-button-next.button.button-gray.swiper-button-next
+                                    svg(width=24 height=24)
+                                        use(xlink:href='/public/sprite.svg#angle--right')
+
+                        .swiper.js--media-slider
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .structure__img
+                                        picture
+                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                    span.structure__name  Тент
+                                .swiper-slide
+                                    .structure__img
+                                        picture
+                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                    span.structure__name  Комната
+                                .swiper-slide
+                                    .structure__img
+                                        picture
+                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                    span.structure__name  24 колышка
+                                .swiper-slide
+                                    .structure__img
+                                        picture
+                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                    span.structure__name  Тент
+                                .swiper-slide
+                                    .structure__img
+                                        picture
+                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                    span.structure__name  Комната
+                                .swiper-slide
+                                    .structure__img
+                                        picture
+                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                    span.structure__name  24 колышка
+
+                .video
+                    .poster
+                        img(src='https://img.youtube.com/vi/ktXmCb1EqxY/hqdefault.jpg' alt='poster')
+
+                    a(href="https://www.youtube.com/watch?v=ktXmCb1EqxY" data-fancybox="video-gallery").open
+                        svg(width=46 height=46 fill='none')
+                            use(xlink:href='/public/sprite.svg#icon--play')
+
+    include ../views/components/infograf
+    include ../views/components/steps
+    include ../views/components/review
+    include ../views/components/often
+    include ../views/components/viewed
+
+    .hidden
+        div(id='video').modal.video
+
+        div(id='params-modal').modal.item
+            .params__container
+                h3 Характеристики
+
+                ul.params__list
+                    li
+                        span.name Вместительность
+                        span.value 2 человека
+                    li
+                        span.name Водостойкость тента
+                        span.value 2000 мм в. ст
+                    li
+                        span.name Количество слоев
+                        span.value 2
+                    li
+                        span.name Вес
+                        span.value 2.3 кг
+                    li
+                        span.name Материал каркаса
+                        span.value Стеклопластик
+                    li
+                        span.name Материал каркаса
+                        span.value Стеклопластик
+                    li
+                        span.name Материал каркаса
+                        span.value Стеклопластик
+                    li
+                        span.name Вместительность
+                        span.value 2 человека
+                    li
+                        span.name Водостойкость тента
+                        span.value 2000 мм в. ст
+                    li
+                        span.name Количество слоев
+                        span.value 2
+                    li
+                        span.name Вес
+                        span.value 2.3 кг
+                    li
+                        span.name Материал каркаса
+                        span.value Стеклопластик
+                    li
+                        span.name Материал каркаса
+                        span.value Стеклопластик
+                    li
+                        span.name Материал каркаса
+                        span.value Стеклопластик

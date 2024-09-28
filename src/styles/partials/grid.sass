@@ -1,0 +1,32 @@
+.container
+  width: 100%
+  max-width: 1360px
+  padding: 0 20px
+  margin: 0 auto
+
+.justify
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.row
+  display: grid
+  gap: 2rem
+
+  &-2
+    grid-template-columns: repeat(2, calc(50% - 1rem))
+    @include tablet
+      @include flex-column
+
+  &-3
+    grid-template-columns: repeat(3, calc(33.3% - 1.3rem))
+    @include tablet
+      @include flex-column
+
+  &-4
+    grid-template-columns: repeat(4, calc(25% - 1.5rem))
+
+    @include tablet
+      grid-template-columns: repeat(2, calc(50% - 1rem))
+    @include mobile
+      @include flex-column

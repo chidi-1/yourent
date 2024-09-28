@@ -1,0 +1,28 @@
+.swiper
+  position: relative
+  width: 100%
+  
+.button.swiper-button-prev,
+.button.swiper-button-next
+  position: relative
+  font-size: 0
+  width: 4.6rem
+  height: 4.6rem
+  border-radius: 2rem
+  padding: 0
+  color: $red
+  border: none !important
+  inset: auto
+
+  &:hover,
+  &:focus,
+  &:active
+    background: $red
+    color: $white
+
+  &:after
+    display: none
+
+  svg
+    width: 2.4rem
+    height: 2.4rem

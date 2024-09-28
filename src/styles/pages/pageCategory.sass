@@ -1,0 +1,25 @@
+.filter
+  display: flex
+  align-items: center
+  gap: 1rem
+
+  &__title
+    display: flex
+    align-items: center
+    gap: 1rem
+
+    svg
+      color: $red
+
+.faq
+  display: flex
+  flex-direction: column
+  gap: 2rem
+
+  details
+    &[open] summary
+      span
+        color: $red
+
+    .details__content
+      padding-bottom: 0

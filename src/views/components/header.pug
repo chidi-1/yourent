@@ -1,0 +1,98 @@
+header.header
+    .header__alert
+        .container
+            span Срочное текстовое объявление
+
+    .header__top
+        .container
+            .justify
+                .info
+                    .info__el.location
+                        svg(width=24 height=24 fill="none")
+                            use(xlink:href='/public/sprite.svg#icon--location')
+                        span Москва
+                        svg(width=24 height=24)
+                            use(xlink:href='/public/sprite.svg#angle--bottom')
+                        ul.location__list
+                            li.location__el
+                                a(href='') Город 1
+                            li.location__el
+                                a(href='') Город 2
+
+                    .info__el
+                        svg(width=24 height=24 fill="none")
+                            use(xlink:href='/public/sprite.svg#icon--clock')
+                        span Ежедневно с&nbsp;8&nbsp;до&nbsp;21&nbsp;по&nbsp;Москве
+
+                .contacts
+                    .contacts__el
+                        svg(width=24 height=24 fill="none")
+                            use(xlink:href='/public/sprite.svg#icon--phone')
+                        span Перезвоните мне
+
+                    a(href='mailto:').contacts__el
+                        svg(width=24 height=24 fill="none")
+                            use(xlink:href='/public/sprite.svg#icon--mail')
+                        span Почта
+
+                    a(href='phone:+75899909999').phone 8 (589) 990 99 99
+
+                    a(href='').social
+                        svg(width=24 height=24 fill="none")
+                            use(xlink:href='/public/sprite.svg#icon--whatsapp')
+                    a(href='').social
+                        svg(width=24 height=24 fill="none")
+                            use(xlink:href='/public/sprite.svg#icon--telegram')
+
+
+    .header__bottom
+        .header__links
+            .container
+                .justify
+                    nav.header__navigation
+                        a(href='').logo
+                            span logo
+
+                        a(href='').catalog.button.button-red
+                            svg(width=24 height=24 fill="none")
+                                use(xlink:href='/public/sprite.svg#icon--catalog')
+                            span Каталог
+
+                        ul.nav__list
+                            li.nav__el
+                                a(href='') Главная
+                            li.nav__el
+                                a(href='') Условия проката
+                            li.nav__el
+                                a(href='') Скидки
+                            li.nav__el
+                                a(href='') Контакты
+
+                    .header__control
+                        form(action='' method='').search
+                            button(type='button').button.button-gray.search__clear
+                                svg(width=24 height=24 fill="none")
+                                    use(xlink:href='/public/sprite.svg#icon--close')
+                            input(type='text' name='' placeholder='Поиск по сайту')
+                            button(type='submit').button.button-gray.search__icon
+                                svg(width=24 height=24 fill="none")
+                                    use(xlink:href='/public/sprite.svg#icon--search')
+
+                        .cart.button.button-gray
+                            svg(width=24 height=24 fill="none")
+                                use(xlink:href='/public/sprite.svg#icon--cart')
+                            span.counter 2
+
+        .header__categories
+            .container
+                ul.categories__list
+                    a(href='').button.button-yellow Интересные предложения
+                    a(href='').button.button-gray  Палатки и&nbsp;спальники
+                    a(href='').button.button-gray Велосипеды
+                    a(href='').button.button-gray Игровые приставки
+                    a(href='').button.button-gray Строй инструменты
+                    a(href='').button.button-gray Проекторы и&nbsp;TV
+                    a(href='').button.button-gray Пылесосы
+                    button.button.button-gray.more
+                        svg(width=24 height=24 fill="none")
+                            use(xlink:href='/public/sprite.svg#icon--dots')
