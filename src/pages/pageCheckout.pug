@@ -1,0 +1,122 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-checkout'
+
+block content
+    section
+        .section__header
+            ul.breadcrumbs
+                li.breadcrumbs__el
+                    a(href='') Главная
+                li.breadcrumbs__el
+                    a(href='') Корзина
+                li.breadcrumbs__el
+                    span Оформление
+
+        .checkout
+            .row.row-3
+                .col-2-start
+                    .checkout__step
+                        .composition
+                            h2 Состав заказа
+                            hr
+
+                            ul.checkout__list
+                                .product.product-horisontal
+                                    picture.product__images
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                                    .product__content
+                                        p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+
+                                    .product__quantity
+                                        span 1шт
+
+                                    .product__price
+                                        span.price 7800 ₽
+                                        span 600 ₽/сутки
+                                        span Залог 101.500 ₽
+
+                                .product.product-horisontal
+                                    picture.product__images
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                                    .product__content
+                                        p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+
+                                    .product__quantity
+                                        span 1шт
+
+                                    .product__price
+                                        span.price 5800 ₽
+                                        span 600 ₽/сутки
+                                        span Залог 101.500 ₽
+
+
+                                .product.product-horisontal
+                                    picture.product__images
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                                    .product__content
+                                        p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+
+                                    .product__quantity
+                                        span 1шт
+
+                                    .product__price
+                                        span.price 4500 ₽
+                                        span 600 ₽/сутки
+                                        span Залог 101.500 ₽
+
+
+                    .checkout__step
+                    .insurance
+
+                .total
+                    h2 Итог
+
+                    .total__container
+                        span.subtitle-1 Время аренды
+
+                        ul.total__list
+                            li
+                                span.total__param Срок аренды
+                                span.total__value 31 мая - 5 июня
+                            li
+                                span.total__param Количество дней
+                                span.total__value 6 дней
+
+                    .total__container
+                        span.subtitle-1 Способ получения
+
+                        ul.total__list
+                            li
+                                span.total__param Способ получения
+                                span.total__value Самовывоз
+                            li
+                                span.total__param Место получения
+                                span.total__value Офис Печатники
+
+                    .total__container.confirmation
+                        span.subtitle-1 Суммы
+
+                        ul.total__list
+                            li
+                                span.total__param Аренда
+                                span.total__value 3689 ₽
+                            li
+                                span.total__param Залог
+                                span.total__value.c-gray 13400 ₽
+                            li
+                                p.notification *Залог возвращается при завершении аренды
+
+                        button().button.button-gray Подтвердить заказ
+
+
+
+    include ../views/components/seo-test
+    include ../views/components/about
