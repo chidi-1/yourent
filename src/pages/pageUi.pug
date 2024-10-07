@@ -101,7 +101,10 @@ block content
                         svg(width=24 height=24 fill='none')
                             use(xlink:href='/public/sprite.svg#icon--catalog')
                     li
-                        svg(width=32 height=32 fill='none')
+                        svg(width=24 height=24 fill='none' stroke='red')
+                            use(xlink:href='/public/sprite.svg#icon--checkbox')
+                    li
+                        svg(width=32 height=32 fill='none' )
                             use(xlink:href='/public/sprite.svg#icon--file')
                     li
                         svg(width=32 height=32 fill='none')
@@ -267,3 +270,17 @@ block content
 
         include ../views/components/about
 
+    section
+        .container
+            h2 Элементы формы
+
+            // если при клике на селект нужно перейти по ссылке, сам url нужно передать в data-url для option
+            select.js--select-style
+                option(selected) По цене (↑)
+                option(data-url='https://ya.ru/') По цене (↓)
+
+
+            label.checkbox
+                input(type="checkbox")
+                .checkbox__icon
+                span.checkbox__text Текст

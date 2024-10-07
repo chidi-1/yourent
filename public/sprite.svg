@@ -5,8 +5,10 @@
     <use xlink:href="#icon--location" width="24" height="24" x="0" y="0"/>
     <view id="angle--bottom-view" viewBox="30 0 24 24"/>
     <use xlink:href="#angle--bottom-transparent" fill="#000000" width="24" height="24" x="30" y="0"/>
-    <view id="angle--bottom-red-view" fill="#DA0916"  viewBox="60 0 24 24"/>
+    <view id="angle--bottom-red-view" viewBox="60 0 24 24"/>
     <use xlink:href="#angle--bottom-transparent" fill="#DA0916" width="24" height="24" x="60" y="0"/>
+    <view id="icon--checkbox-white-view"  viewBox="90 0 24 24"/>
+    <use xlink:href="#icon--checkbox" stroke="#fff" width="24" height="24" x="90" y="0"/>
 
     <!-- HTML -->
     <symbol viewBox="0 0 24 24" id="icon--location">
@@ -83,6 +85,10 @@
 
     <symbol viewBox="0 0 24 24" id="angle--top">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.38193 14.6491C6.60693 14.8738 6.91193 15 7.22993 15C7.54793 15 7.85293 14.8738 8.07793 14.6491L12.0299 10.6981L15.9819 14.6491C16.2094 14.861 16.5103 14.9764 16.8212 14.9709C17.1321 14.9655 17.4287 14.8395 17.6485 14.6197C17.8684 14.3998 17.9943 14.1032 17.9998 13.7923C18.0053 13.4814 17.8899 13.1805 17.6779 12.9531L12.8779 8.15306C12.6529 7.92834 12.3479 7.80211 12.0299 7.80211C11.7119 7.80211 11.4069 7.92834 11.1819 8.15306L6.38193 12.9531C6.15721 13.1781 6.03099 13.4831 6.03099 13.8011C6.03099 14.1191 6.15721 14.4241 6.38193 14.6491Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="icon--checkbox">
+        <path d="M16.5 8.75L10.2 16.25L7.5 13.25" fill="transparent" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
     <symbol viewBox="0 0 46 46" id="icon--warehouse">
