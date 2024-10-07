@@ -1,0 +1,100 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-cart'
+
+block content
+    section
+        .section__header
+            ul.breadcrumbs
+                li.breadcrumbs__el
+                    a(href='') Главная
+                li.breadcrumbs__el
+                    span Корзина
+
+        .cart-container
+            .cart__left
+                .cart
+                    h1.h3 Корзина
+
+                    hr
+
+                    ul.cart__list
+                        li.cart__el
+                            label.checkbox
+                                input(type="checkbox")
+                                .checkbox__icon
+
+                            .product.product-horisontal
+                                .product__image
+                                    picture
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                                .product__content
+                                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                                    span.product__available.c-green Доступно к аренде
+
+                                .product__quantity
+                                    button.no-style -
+                                    input(type='text' name='' value='1')
+                                    button.no-style +
+
+                                .product__params
+                                    .product__price
+                                        span.product__value 600
+                                            =" "
+                                            small ₽/месяц
+                                        span.product__discount 500 ₽
+                                        span.product__percent -22%
+
+                                    span.product__deposit Залог 101.500 ₽
+
+                                .product__remove
+                                    button.no-style
+                                        svg(width=20 height=20 fill='none')
+                                            use(xlink:href='/public/sprite.svg#icon--cart')
+
+                        li.cart__el
+                            label.checkbox
+                                input(type="checkbox" disabled)
+                                .checkbox__icon
+
+                            .product.not-available.product-horisontal
+                                .product__image
+                                    picture
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                                .product__content
+                                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                                    span.product__available.c-green Доступно к аренде
+
+                                .product__quantity
+                                    button.no-style -
+                                    input(type='text' name='' value='1')
+                                    button.no-style +
+
+                                .product__params
+                                    .product__price
+                                        span.product__value 600
+                                            =" "
+                                            small ₽/месяц
+                                        span.product__discount 500 ₽
+                                        span.product__percent -22%
+
+                                    span.product__deposit Залог 101.500 ₽
+
+                                .product__remove
+                                    button.no-style
+                                        svg(width=20 height=20 fill='none')
+                                            use(xlink:href='/public/sprite.svg#icon--cart')
+
+
+                .info
+
+            .cart__right
+                .calendar
+
+    include ../views/components/seo-test
+    include ../views/components/about
