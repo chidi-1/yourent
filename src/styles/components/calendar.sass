@@ -1,0 +1,172 @@
+.flatpickr-calendar
+  border-radius: 20px
+  max-width: 360px
+  width: 100%
+
+  .flatpickr-months
+    padding: 16px 24px
+    display: grid
+    grid-template-columns: 1fr 30px 30px
+    align-items: center
+
+    .flatpickr-prev-month,
+    .flatpickr-next-month
+      position: relative
+      padding: 0
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      width: 30px
+      height: 30px
+
+      svg
+        width: 12px
+        height: 12px
+
+        path
+            fill: rgba(0,0,0,0.6)
+            stroke: rgba(0,0,0,0.6)
+
+      //&:hover
+      //  svg
+      //    path
+      //      fill: $green-color
+
+    .flatpickr-month
+      grid-row-start: 1
+      grid-row-end: 2
+      text-align: left
+      display: flex
+      align-items: center
+      justify-content: flex-start
+
+      .flatpickr-current-month
+        display: flex
+        align-items: center
+        padding: 0
+        height: 24px
+        position: relative
+        left: 0
+        width: 100%
+
+        select.flatpickr-monthDropdown-months
+          width: auto
+          text-align: left
+          padding-left: 0
+          @include subtitle1
+          line-height: 24px
+
+        .numInputWrapper
+          width: auto
+
+          input.cur-year
+            width: 65px
+            height: 24px
+            @include subtitle1
+            line-height: 24px
+
+  .flatpickr-innerContainer
+    padding: 10px
+    padding-top: 0
+    width: 100%
+
+    .flatpickr-rContainer,
+    .flatpickr-days,
+    .dayContainer
+      width: 340px
+      min-width: 340px
+      max-width: 340px
+
+    .flatpickr-weekdaycontainer
+      display: grid
+      grid-template-columns: repeat(7, 32px)
+      gap: 16px
+      justify-content: center
+
+      span
+        @include font-params(12px, auto, 400)
+        letter-spacing: 0.4px
+
+    .dayContainer
+      display: grid
+      grid-template-columns: repeat(7, 32px)
+      gap: 16px
+      justify-content: center
+      text-align: center
+
+      .flatpickr-day
+        border: 1px solid transparent
+        -webkit-flex-basis: 32px
+        width: 32px !important
+        height: 32px
+        @include font-params(14px, 30px, 400)
+        position: relative
+        box-shadow: none !important
+
+        &.prevMonthDay,
+        &.nextMonthDay
+          opacity: .6
+
+        //&.selected
+        //  background: $mainFontColor !important
+        //  color: $white-color
+        //  border: 1px solid $mainFontColor
+
+        &.today
+          border: 1px solid rgba(0,0,0,.8)
+          background: transparent
+          color: rgba(0,0,0,.8)
+          @include transition
+
+          &:hover
+            border-color: $pink
+            background: $pink
+            color: rgba(0,0,0,.8)
+
+        &.startRange,
+        &.endRange
+          background: $red !important
+          color: $white
+          border-radius: 100%
+          border-color: $red
+
+        &.startRange
+          &:after
+            position: absolute
+            content: ""
+            left: 50%
+            right: -9px
+            top: -1px
+            bottom: -1px
+            z-index: -1
+            background: $pink
+
+        &.inRange:not(.startRange):not(.endRange)
+          background: $pink
+          box-shadow: none
+
+          &:before
+            position: absolute
+            content: ""
+            top: -1px
+            bottom: -1px
+            left: -9px
+            right: -9px
+            background: $pink
+            z-index: -1
+
+        &.endRange
+          &:before
+            position: absolute
+            content: ""
+            right: 50%
+            left: -9px
+            top: -1px
+            bottom: -1px
+            z-index: -1
+            background: $pink
+
+        &.selected.startRange.endRange
+          &:after,
+          &:before
+            display: none

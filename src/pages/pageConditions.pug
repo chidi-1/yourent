@@ -1,0 +1,326 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-conditions'
+
+block content
+    section
+        .section__header
+            ul.breadcrumbs
+                li.breadcrumbs__el
+                    a(href='') Главная
+                li.breadcrumbs__el
+                    span Условия аренды
+
+            h1 Условия аренды
+
+    section
+        .row.row-2
+            .conditions
+                h3.c-red Кто может взять в&nbsp;аренду
+
+                .conditions__who
+                    .condition
+                        p.semibold Вы&nbsp;можете взять вещи в&nbsp;аренду при наличии действующего паспорта&nbsp;РФ и&nbsp;суммы залога за&nbsp;вещи.
+                    .condition
+                        p.semibold Граждане без действующего паспорта&nbsp;РФ также могут взять вещи в&nbsp;аренду, но&nbsp;сумма залога будет увеличена.
+
+            .conditions
+                h3.c-red Условия оплаты
+
+                .conditions__payment
+                    .condition
+                        p.semibold Оплата производится после заключение договора в&nbsp;письменном или электронном виде.
+                    .condition
+                        p.semibold Оплата производится через СБП (Систему быстрых платежей) в&nbsp;вашем мобильном приложениии.
+                    .condition
+                        p.semibold Мы&nbsp;не&nbsp;берем в&nbsp;качестве залога документы и&nbsp;ценные вещи. Залог оставляется только деньгами.
+                    .condition
+                        p.semibold Деньги за&nbsp;неиспользованные дни возвращаются согласно условиям договора
+
+    section
+        .conditions
+            h3.c-red Условия доставки
+
+            .row.row-2.conditions__territory
+                .condition
+                    span.subtitle-1.c-gray Внутри МКАД
+
+                    .items
+                        .item
+                            span.subtitle-2 Малогабаритные вещи
+                            p
+                                span.c-red Сегодня
+                                =" "
+                                span в течение 2 часов -
+                                =" "
+                                span.c-green.semibold 600 ₽
+                            p
+                                span.c-red Сегодня
+                                =" "
+                                span в течение дня
+                                =" "
+                                span.c-green.semibold 600 ₽
+                            p
+                                span.c-red Завтра
+                                =" "
+                                span.c-green.semibold 399 ₽
+
+                        .item
+                            span.subtitle-2 Крупногабаритные вещи
+                            p
+                                span.c-red Сегодня
+                                =" "
+                                span в течение 2 часов -
+                                =" "
+                                span.c-green.semibold 600 ₽
+                            p
+                                span.c-red Сегодня
+                                =" "
+                                span в течение дня
+                                =" "
+                                span.c-green.semibold 600 ₽
+                            p
+                                span.c-red Завтра
+                                =" "
+                                span.c-green.semibold 399 ₽
+
+
+                .condition
+                    span.subtitle-1.c-gray За МКАД (до 20 км)
+
+                    .items
+                        .item
+                            span.subtitle-2 Малогабаритные вещи
+                            p
+                                span.c-red Сегодня
+                                =" "
+                                span в течение 2 часов -
+                                =" "
+                                span.c-green.semibold 600 ₽
+                            p
+                                span.c-red Сегодня
+                                =" "
+                                span в течение дня
+                                =" "
+                                span.c-green.semibold 600 ₽
+                            p
+                                span.c-red Завтра
+                                =" "
+                                span.c-green.semibold 399 ₽
+
+                        .item
+                            span.subtitle-2 Крупногабаритные вещи
+                            p
+                                span.c-red Сегодня
+                                =" "
+                                span в течение 2 часов -
+                                =" "
+                                span.c-green.semibold 600 ₽
+                            p
+                                span.c-red Сегодня
+                                =" "
+                                span в течение дня
+                                =" "
+                                span.c-green.semibold 600 ₽
+                            p
+                                span.c-red Завтра
+                                =" "
+                                span.c-green.semibold 399 ₽
+
+
+    section
+        .conditions
+            h3.c-red Условия возврата
+
+            .row.row-2
+                .conditions__refund
+                    .condition
+                        .items
+                            p.semibold Вернуть самостоятельно в офис -
+                                =" "
+                                span.c-green Бесплатно
+
+                    .condition
+                        span.subtitle-1.c-gray Внутри МКАД
+
+                        .items
+                            .item
+                                span.subtitle-2 Малогабаритные вещи
+                                p
+                                    span.c-red Сегодня
+                                    =" "
+                                    span в течение 2 часов -
+                                    =" "
+                                    span.c-green.semibold 600 ₽
+                                p
+                                    span.c-red Сегодня
+                                    =" "
+                                    span в течение дня
+                                    =" "
+                                    span.c-green.semibold 600 ₽
+                                p
+                                    span.c-red Завтра
+                                    =" "
+                                    span.c-green.semibold 399 ₽
+
+                            .item
+                                span.subtitle-2 Крупногабаритные вещи
+                                p
+                                    span.c-red Сегодня
+                                    =" "
+                                    span в течение 2 часов -
+                                    =" "
+                                    span.c-green.semibold 600 ₽
+                                p
+                                    span.c-red Сегодня
+                                    =" "
+                                    span в течение дня
+                                    =" "
+                                    span.c-green.semibold 600 ₽
+                                p
+                                    span.c-red Завтра
+                                    =" "
+                                    span.c-green.semibold 399 ₽
+
+
+                .conditions__refund
+                    .condition
+                        .items
+                            p.semibold Вернуть самостоятельно в постампт -
+                                =" "
+                                span.c-green Бесплатно
+
+                    .condition
+                        span.subtitle-1.c-gray За МКАД (до 20 км)
+
+                        .items
+                            .item
+                                span.subtitle-2 Малогабаритные вещи
+                                p
+                                    span.c-red Сегодня
+                                    =" "
+                                    span в течение 2 часов -
+                                    =" "
+                                    span.c-green.semibold 600 ₽
+                                p
+                                    span.c-red Сегодня
+                                    =" "
+                                    span в течение дня
+                                    =" "
+                                    span.c-green.semibold 600 ₽
+                                p
+                                    span.c-red Завтра
+                                    =" "
+                                    span.c-green.semibold 399 ₽
+
+                            .item
+                                span.subtitle-2 Крупногабаритные вещи
+                                p
+                                    span.c-red Сегодня
+                                    =" "
+                                    span в течение 2 часов -
+                                    =" "
+                                    span.c-green.semibold 600 ₽
+                                p
+                                    span.c-red Сегодня
+                                    =" "
+                                    span в течение дня
+                                    =" "
+                                    span.c-green.semibold 600 ₽
+                                p
+                                    span.c-red Завтра
+                                    =" "
+                                    span.c-green.semibold 399 ₽
+
+
+    section
+        .conditions.conditions__rules
+            .rules__delivery
+                h3.c-red  Правила доставки
+
+                .condition
+                    p.semibold Доставка сегодня возможна при наличии свободных курьеров.
+                .condition
+                    p.semibold Доставка вещей осуществляется в фирменных коробках, которые защитят товары от грязи и повреждений при транспортировке.
+                .condition
+                    p.semibold Some text here
+                .condition
+                    p.semibold Some text here
+
+            picture.rules__img
+                source(type='image/webp' srcset=' /src/assets/images/img--services.webp')
+                img(src='/src/assets/images/img--services.jpg')
+
+
+    section
+        .conditions.conditions__deficiencies
+            h3.c-red  Повреждения и устранение недочетов
+
+            p.semibold Some text here, some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text .
+
+            .condition
+                p
+                    span.c-red 1.
+                    =" "
+                    =" some text some text"
+                p
+                    span.c-red 2.
+                    =" "
+                    =" some text some text"
+                p
+                    span.c-red 3.
+                    =" "
+                    =" some text some text"
+
+            .condition
+                table
+                    tr
+                        th
+                            span.subtitle-2.c-red Повреждение
+                        th
+                            span.subtitle-2.c-red Стоимость ремонта
+
+                    tr
+                        td(colspan=2)
+                            span.semibold Группа категории
+
+                    tr
+                        td
+                            span.c-gray Повреждение
+                        td
+                            span.c-green 100 ₽
+
+                    tr
+                        td
+                            span.c-gray Повреждение
+                        td
+                            span.c-green 100 ₽
+
+                    tr
+                        td
+                            span.c-gray Повреждение
+                        td
+                            span.c-green 100 ₽
+
+                    tr
+                        td(colspan=2)
+                            span.semibold Группа категории
+
+                    tr
+                        td
+                            span.c-gray Повреждение
+                        td
+                            span.c-green 100 ₽
+
+                    tr
+                        td
+                            span.c-gray Повреждение
+                        td
+                            span.c-green 100 ₽
+
+                    tr
+                        td
+                            span.c-gray Повреждение
+                        td
+                            span.c-green 100 ₽

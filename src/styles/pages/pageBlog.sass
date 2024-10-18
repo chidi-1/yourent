@@ -1,0 +1,167 @@
+.page-blog
+  .tags
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 2rem
+
+  .tag
+    padding: 1rem
+    background: $gray-light
+    border-radius: 2rem
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+
+    &.active
+      background: $red
+
+      *
+        color: $white
+
+    *
+      font-weight: 600
+
+  .blog
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+
+    &__el
+      display: flex
+      flex-direction: column
+      gap: 1rem
+      @include gray-bg
+      padding: 1rem
+
+    &__image
+      position: relative
+      overflow: hidden
+      height: 21rem
+      border-radius: 2rem
+
+      .tag
+        position: absolute
+        z-index: 5
+        left: 1rem
+        top: 1rem
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &__content
+      display: flex
+      flex-direction: column
+      gap: 1rem
+      padding: 1rem
+      border-radius: 1rem
+      background: $white
+
+  .article
+    &__data
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      align-content: center
+      gap: 1rem
+
+    &__header
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 3rem
+      align-items: stretch
+
+    &__preview
+      display: flex
+      flex-direction: column
+      gap: 2rem
+
+    &__content
+      padding: 3rem
+      display: flex
+      flex-direction: column
+      gap: 3rem
+      border: 1px solid $gray-light
+      border-radius: 2rem
+
+      .content
+        display: flex
+        flex-direction: column
+        gap: 1.5rem
+
+        &__el
+          display: flex
+          flex-direction: column
+          gap: 1rem
+
+  article
+    display: flex
+    flex-direction: column
+    gap: 2rem
+
+    h2
+      margin-top: 6rem
+
+    h2:first-child
+      margin-top: 0
+      margin-bottom: 1rem
+
+    img
+      border-radius: 2rem
+      max-width: 100%
+
+    .table
+      padding: 3rem
+      border: 1px solid $gray-light
+      border-radius: 2rem
+
+    table
+      width: 100%
+      table-layout: fixed
+
+      tr
+        th,
+        td
+          padding: 1rem
+          border-bottom: 1px solid $gray
+          border-left: 1px solid $gray
+          vertical-align: middle
+
+          &:first-child
+            padding-left: 0
+            border-left: none
+
+        th
+          padding-top: 0
+          color: $red
+          font-weight: 600
+
+    blockquote
+      @include gray-bg
+
+    a[data-fancybox="video-gallery"]
+      position: relative
+      border-radius: 2rem
+      overflow: hidden
+
+      &:before,
+      &:after
+        position: absolute
+        content: ''
+
+      &:before
+        inset: 0
+        background: rgba(0,0,0,.3)
+        border-radius: 2rem
+
+      &:after
+        width: 46px
+        height: 46px
+        background: url("/public/sprite.svg#icon--play-view") no-repeat  50% 50%
+        background-size: cover
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        z-index: 5

@@ -1,0 +1,62 @@
+.page-contacts
+  .details__header
+    svg,
+    span
+      color: $red
+
+  .contacts__offices
+    .address__container
+      padding: 0
+
+    .address
+      display: grid
+      grid-template-columns: 26.5rem repeat(2, 1fr)
+
+  .contacts__points
+    .address__container
+      background: $gray-light
+
+      &.active
+        background: $red
+
+    .map
+      min-height: 57.5rem
+
+  .contacts
+    border: 2px solid $red
+    padding: 2rem
+    border-radius: 2rem
+
+
+    .address__left
+      max-height: 58rem
+
+      a
+        display: flex
+        gap: 1rem
+
+      .social
+        justify-content: flex-start
+
+  .information
+    display: flex
+    flex-direction: column
+    gap: 2rem
+
+    &__list
+      display: flex
+      flex-direction: column
+      gap: 1rem
+
+      li
+        display: flex
+        justify-content: space-between
+
+        span
+          max-width: 70%
+
+    &__name
+      font-weight: 600
+
+    &__value
+      color: $gray-text

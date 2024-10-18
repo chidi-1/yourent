@@ -4,6 +4,8 @@ block vars
     - var pageClass = 'page-checkout'
 
 block content
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=a05aacec-6f3a-46fa-a45b-ad4882c9f689&lang=ru_RU" type="text/javascript")
+
     section
         .section__header
             ul.breadcrumbs
@@ -17,64 +19,195 @@ block content
         .checkout
             .row.row-3
                 .col-2-start
-                    .checkout__step
-                        .composition
-                            h2 Состав заказа
-                            hr
+                    .checkout__container
+                        .checkout__step
+                            .composition
+                                h2 Состав заказа
+                                hr
 
-                            ul.checkout__list
-                                .product.product-horisontal
-                                    picture.product__images
-                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                                ul.cart__list
+                                    li.cart__el
+                                        .product.product-horisontal
+                                            picture.product__images
+                                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
-                                    .product__content
-                                        p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                                            .product__content
+                                                p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
 
-                                    .product__quantity
-                                        span 1шт
+                                            .product__quantity
+                                                span 1шт
 
-                                    .product__price
-                                        span.price 7800 ₽
-                                        span 600 ₽/сутки
-                                        span Залог 101.500 ₽
+                                            .product__price
+                                                span.price 7800 ₽
+                                                span.c-gray 600 ₽/сутки
+                                                span.c-gray Залог 101.500 ₽
 
-                                .product.product-horisontal
-                                    picture.product__images
-                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                                    li.cart__el
+                                        .product.product-horisontal
+                                            picture.product__images
+                                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
-                                    .product__content
-                                        p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                                            .product__content
+                                                p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
 
-                                    .product__quantity
-                                        span 1шт
+                                            .product__quantity
+                                                span 1шт
 
-                                    .product__price
-                                        span.price 5800 ₽
-                                        span 600 ₽/сутки
-                                        span Залог 101.500 ₽
+                                            .product__price
+                                                span.price 5800 ₽
+                                                span.c-gray 600 ₽/сутки
+                                                span.c-gray Залог 101.500 ₽
+
+                                    li.cart__el
+                                        .product.product-horisontal
+                                            picture.product__images
+                                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                                            .product__content
+                                                p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+
+                                            .product__quantity
+                                                span 1шт
+
+                                            .product__price
+                                                span.price 4500 ₽
+                                                span.c-gray 600 ₽/сутки
+                                                span.c-gray Залог 101.500 ₽
+
+                        .checkout__step.filled
+                            h3
+                                span.c-red 1
+                                =" "
+                                =" Данные покупателя"
+
+                            .row.row-2
+                                input(type='text' name='' placeholder='ФИО').input.input-name
+                                input(type='text' name='' placeholder='Введите мобильный номер телефона').input.input-phone.js--input-phone
+
+                        .checkout__step
+                            h3
+                                span.c-red 2
+                                =" "
+                                ="Способ получения"
+
+                            label.get
+                                input(type='radio' checked name='delivery').hidden
+                                .details
+                                    .details__summary
+                                        .justify
+                                            .details__header
+                                                svg(width=46 height=46 fill='none')
+                                                    use(xlink:href='/public/sprite.svg#icon--build')
+                                                span.subtitle-2 Самовывоз
+
+                                            span.c-green  Бесплатно
+
+                                    .details__content
+                                        .address
+                                            .address__left
+                                                .address__container
+                                                    span
+                                                        strong Адрес офиса:
+                                                    span.c-gray г. Москва, ул. Полбина д. 3 ст3
+                                                .address__container
+                                                    img(src='/src/assets/images/map--office.jpg' alt='Офис')
+                                                .address__container
+                                                    span
+                                                        strong График
+                                                    span.c-gray Пн, Вт, Ср, Чт, Пт - с 08:00 до 20:00
+                                                    span.c-gray Сб, Вс - выходной
+                                                .address__container
+                                                    span
+                                                        strong Телефон:
+                                                    a(href='tel:87483233344').c-gray + 7 (748) 323 - 33 - 44
+
+                                            .address__right
+                                                div(id='officeMap').map
 
 
-                                .product.product-horisontal
-                                    picture.product__images
-                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                            label.get
+                                input(type='radio' name='delivery').hidden
+                                .details
+                                    .details__summary
+                                        .justify
+                                            .details__header
+                                                svg(width=46 height=46 fill='none')
+                                                    use(xlink:href='/public/sprite.svg#icon--self-delivery')
+                                                span.subtitle-2 Самовывоз из&nbsp;пункта выдачи
 
-                                    .product__content
-                                        p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                                            span.c-green от 190 ₽
 
-                                    .product__quantity
-                                        span 1шт
+                                    .details__content
+                                        .address
+                                            // класс .js--control-map добавляет переключение карты при клике на пункты списка
+                                            .address__left.js--control-map
+                                                div(data-lat='55.753994' data-lan='37.622093').address__container.active
+                                                    span
+                                                        strong Адрес: г. Москва, ул. Полбина д. 3 ст3
+                                                    span.c-gray Пн - пт: с 09 до 18:00
+                                                    span.c-gray Сб - Вс: Выходной
 
-                                    .product__price
-                                        span.price 4500 ₽
-                                        span 600 ₽/сутки
-                                        span Залог 101.500 ₽
+                                                div(data-lat='55.907228' data-lan='31.260503').address__container
+                                                    span
+                                                        strong Адрес: г. Москва, ул. Полбина д. 3 ст3
+                                                    span.c-gray Пн - пт: с 09 до 18:00
+                                                    span.c-gray Сб - Вс: Выходной
 
+                                            .address__right
+                                                div(id='pointsMap').map
 
-                    .checkout__step
-                    .insurance
+                            label.get
+                                input(type='radio' name='delivery').hidden
+                                .details
+                                    .details__summary
+                                        .justify
+                                            .details__header
+                                                svg(width=46 height=46 fill='none')
+                                                    use(xlink:href='/public/sprite.svg#icon--delivery')
+                                                span.subtitle-2 Доставкар
+
+                                            span.c-green от 590 ₽
+
+                                    .details__content
+                                        .row.row-3.delivery__data
+                                            .col-3.search-address
+                                                .search-address__container
+                                                    input(type='text' name='' placeholder='ФИО').input.input-name
+
+                                                    // видимость управляется классом hidden
+                                                    .search-address__result.hidden
+                                                        ul
+                                                            li
+                                                                span г.Москва Долгопрудного 18А
+                                                            li
+                                                                span г.Москва Долгопрудного 18А
+                                                            li
+                                                                span г.Москва Долгопрудного 18А
+
+                                            input(type='text' name='' value='Подъезд: ').input
+                                            input(type='text' name='' value='Этаж: ').input
+                                            input(type='text' name='' value='Домофон:').input
+
+                                            .col-3.interval
+                                                .justify
+                                                    span.semibold Выбрать интервал доставки:
+
+                                                    .interval__values
+                                                        label.checkbox
+                                                            input(type="radio" name='interval')
+                                                            span.checkbox__text  с 10:00 до 14:00
+                                                        label.checkbox
+                                                            input(type="radio" name='interval')
+                                                            span.checkbox__text с 14:00 до 18:00
+                                                        label.checkbox
+                                                            input(type="radio" name='interval')
+                                                            span.checkbox__text с 18:00 до 21:00
+
+                                            .col-3
+                                                textarea(name='' placeholder='Комментарий к доставке').input.input-messsage
 
                 .total
                     h2 Итог
@@ -114,9 +247,24 @@ block content
                             li
                                 p.notification *Залог возвращается при завершении аренды
 
-                        button().button.button-gray Подтвердить заказ
+                        button(disabled).button.button-green.disabled Подтвердить заказ
 
+    section.insurance
+        h3 Страховка аренды
 
+        .row.row-3
+            .insurance__on
+                label.checkbox
+                    input(type="checkbox")
+                    .checkbox__icon
+                    span.checkbox__text.c-red Включить защиту?
 
-    include ../views/components/seo-test
+                span.c-gray Сумма заказа пересчитается автоматически
+
+            .col-2-end
+                p.subtitle-2 В&nbsp;случае повреждения вещи, мы&nbsp;покроем все расходы на&nbsp;ремонт&nbsp;&mdash; вам не&nbsp;придется платить.
+                a(href='').c-red.semibold Условия защиты
+
+    include ../views/components/steps
     include ../views/components/about
+    include ../views/components/review

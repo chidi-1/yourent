@@ -18,6 +18,7 @@
   "homepage": "./",
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
+    "imask": "^7.6.1",
     "choices.js": "^11.0.2"
   }
 }

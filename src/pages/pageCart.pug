@@ -12,6 +12,14 @@ block content
                 li.breadcrumbs__el
                     span Корзина
 
+        // пустая корзина
+        .cart-empty
+            h1.c-red В&nbsp;корзине пока пусто
+            p.subtitle-1 Загляните в&nbsp;каталог, чтобы выбрать товары
+            .text-center
+                a(href='').button.button-red  В&nbsp;каталог
+
+        // корзина с содержимым
         .cart-container
             .cart__left
                 .cart
@@ -32,11 +40,11 @@ block content
                                         img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
                                 .product__content
-                                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                                    p.semibold Палатка двухместная автоматическая серая Dallas 2
                                     span.product__available.c-green Доступно к аренде
 
                                 .product__quantity
-                                    button.no-style -
+                                    button.no-style.minus -
                                     input(type='text' name='' value='1')
                                     button.no-style +
 
@@ -52,8 +60,8 @@ block content
 
                                 .product__remove
                                     button.no-style
-                                        svg(width=20 height=20 fill='none')
-                                            use(xlink:href='/public/sprite.svg#icon--cart')
+                                        svg(width=18 height=19 fill='none')
+                                            use(xlink:href='/public/sprite.svg#icon--trash')
 
                         li.cart__el
                             label.checkbox
@@ -67,11 +75,11 @@ block content
                                         img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
                                 .product__content
-                                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                                    p.semibold Палатка двухместная автоматическая серая Dallas 2
                                     span.product__available.c-green Доступно к аренде
 
                                 .product__quantity
-                                    button.no-style -
+                                    button.no-style.minus -
                                     input(type='text' name='' value='1')
                                     button.no-style +
 
@@ -87,14 +95,72 @@ block content
 
                                 .product__remove
                                     button.no-style
-                                        svg(width=20 height=20 fill='none')
-                                            use(xlink:href='/public/sprite.svg#icon--cart')
+                                        svg(width=18 height=19 fill='none')
+                                            use(xlink:href='/public/sprite.svg#icon--trash')
 
 
                 .info
+                    h3 Полезная информация
+                    ul.info__discount
+                        li от 4 дней - 10%
+                        li от 6 дней - 10%
+                        li от 8 дней - 20%
+                        li от 10 дней - 30%
+
+                    ul.info__params
+                        li
+                            .info__header
+                                svg(width=46 height=46 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--build')
+                                span.subtitle-1 Самовывоз
+                            p Забрать сегодня из&nbsp;шоу-рума г. Москва, ул. Полбина д.&nbsp;3&nbsp;ст3
+
+                        li
+                            .info__header
+                                svg(width=46 height=46 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--delivery')
+                                span.subtitle-1 Доставка
+                            p Доставим сегодня
+                                = " "
+                                mark бесплатно
+
+                        li
+                            .info__header
+                                svg(width=46 height=46 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--file')
+                                span.subtitle-1 Договор
+                            p Мы&nbsp;заключаем договор с&nbsp;каждым клиентом.
+                                br
+                                | Без скрытых платежей и&nbsp;условий.
 
             .cart__right
                 .calendar
+                    h3 Выбрать даты аренды
 
-    include ../views/components/seo-test
+                    .calendar-inline.range
+
+
+                .total
+                    .total__container
+                        h3 Время аренды
+
+                        ul.total__list
+                            li
+                                span.total__param Срок аренды
+                                span.total__value 16 дней
+                            li
+                                span.total__param Размер скидки
+                                span.total__value.discount -450 ₽
+                            li
+                                span.total__param Товары (1)
+                                span.total__value 3689 ₽
+                            li
+                                span.total__param Залог
+                                span.total__value.c-gray-text 13400 ₽
+
+                        a(href='').button.button-red Перейти к оформлению
+
+    include ../views/components/products-slider-cart
+    include ../views/components/steps
     include ../views/components/about
+    include ../views/components/review

@@ -85,6 +85,27 @@ button,
       cursor: default
       pointer-events: none
 
+  &.button-green
+    background: $green
+    border: 2px solid $green
+    color: $white
+
+    &:hover,
+    &:focus
+      color: $gray
+
+    &:active,
+    &:disabled,
+    &.disabled
+      color: $white
+      background: $gray
+      border: 2px solid $gray
+
+    &:disabled,
+    &.disabled
+      cursor: default
+      pointer-events: none
+
   &.no-style
     background: transparent
     padding: 0

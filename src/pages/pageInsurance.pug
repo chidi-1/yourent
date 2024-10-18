@@ -1,0 +1,101 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-insurance'
+
+block content
+    section
+        .section__header
+            ul.breadcrumbs
+                li.breadcrumbs__el
+                    a(href='') Страхование аренды
+                li.breadcrumbs__el
+                    span Страхование аренды
+
+        h1 Страхование аренды
+
+        .rules
+            .rules__delivery
+                .condition
+                    span.subtitle-1 Защищает от повреждений
+                    p Покроет до 90% ремонта вещи
+                .condition
+                    span.subtitle-1 Обезопасит от кражи
+                    p Вам не прийдётся возмещать украденную вещь
+                .condition
+                    span.subtitle-1 Покроет невидимые повреждения
+                    p.semibold Никаких штрафов, если вещь была залита или появились ошибки в работе
+
+            picture.rules__img
+                source(type='image/webp' srcset=' /src/assets/images/img--insurance.webp')
+                img(src='/src/assets/images/img--insurance.jpg')
+
+    section
+        h2 Как оформить страховку
+
+        ul.registration
+            li.registration__el
+                span.registration__number 1
+                .registration__text
+                    p Выберите необходимые к аренде товары
+                img(src='/src/assets/images/icon--registration-1.svg').registration__icon
+
+            li.registration__el
+                span.registration__number 2
+                .registration__text
+                    p Поставьте галочку напротив «Включить защиту»
+                img(src='/src/assets/images/icon--registration-2.svg').registration__icon
+
+            li.registration__el
+                span.registration__number 3
+                .registration__text
+                    p Страховка оформлена! Сумма будет отображена в разделе «Итог»
+                img(src='/src/assets/images/icon--registration-3.svg').registration__icon
+
+    section
+        h2 Почему стоит включить защиту аренды
+
+        .reason
+            .reason__el.reason__el-l
+                span.subtitle-1.c-red Защита убирает риск получить штраф
+                p Защита убирает риск получить штраф
+            .reason__el
+                span.subtitle-1.c-red Страхуются все вещи
+                p Страховка покрывает каждую вещь в корзине, сумма рассчитывается автоматически и добавляется к стоимости аренды
+            .reason__el
+                span.subtitle-1.c-red Собственная сервисная экспертиза
+                p Мы самостоятельно проводим экспертизу вещей в нашем ремонтном центре и встаём на сторону клиента в вопросах штрафов и компенсаций
+
+    section
+        h2  Технологии разработки ПО
+
+        .example
+            picture.example__img
+                source(type='image/webp' srcset=' /src/assets/images/img--example.webp')
+                img(src='/src/assets/images/img--example.jpg')
+            .example__content
+                .example__text
+                    span.subtitle-1  Оценочная стоимость 22 490 ₽
+                    span.c-red.semibold Аккумуляторная дрель-шуруповерт Makita LXT DDF453RFE
+
+                .example__table
+                    div.th
+                        span.subtitle-1.c-red Что случилось?
+                    div.th
+                        span.subtitle-1.c-red С защитой
+                    div.th
+                        span.subtitle-1.c-red Без защиты
+                    div
+                        p.semibold Сломался и ремонту не подлежит
+                    div
+                        p.semibold С защитой Вы платите 10% от суммы товара =
+                            =" "
+                            span.c-red 2449 ₽
+                    div
+                        p.semibold Вы платите 100% от суммы товара =
+                            =" "
+                            span.c-red 24490 ₽
+
+                .example__max
+                    .subtitle-1 Максимальная сумма компенсации с защитой:&nbsp;
+                        h3.c-red 2449 ₽

@@ -2,65 +2,81 @@
   .cart-container
     display: flex
     justify-content: space-between
-    align-content: flex-start
+    align-content: stretch
     gap: 2rem
 
     .cart__left
       display: flex
       flex-direction: column
       gap: 2rem
-      flex: 0 0 calc(100% - 44rem)
+      flex: 0 0 calc(100% - 42rem)
 
-  .cart
-    padding: 2rem
-    background: $gray-light
-    border-radius: 2rem
+    .cart__right
+      display: flex
+      flex-direction: column
+      gap: 2rem
+      width: 40rem
+      @include gray-bg
+
+
+  .info
+    @include gray-bg
     display: flex
     flex-direction: column
     gap: 2rem
 
-    hr
-      display: block
-      height: 1px
-      background: $gray
-      margin: 0
+    &__discount
+      display: flex
+      gap: 2rem
+      align-items: stretch
 
-    &__el
+      li
+        display: inline-block
+        padding: 1.5rem 1rem
+        background: $white
+        border-radius: 2rem
+        color: $red
+        font-weight: 600
+
+    &__params
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 2rem
+      align-items: stretch
+
+      li
+        display: flex
+        flex-direction: column
+        gap: 1rem
+        padding: 1rem
+        background: $white
+        border-radius: 2rem
+
+        p
+          mark
+            background: transparent
+            color: $red
+
+    &__header
       display: flex
       align-items: center
       gap: 1rem
+      color: $red
 
-      .product
-        width: calc(100% - 3rem)
-        border-radius: 2rem
-        background: $white
-        padding: 2rem
-        align-items: center
-        justify-content: space-between
+  .calendar
+    display: flex
+    flex-direction: column
+    gap: 1.7rem
 
-        &__image
-          background: transparent
-          border-radius: 0
-          width: 12rem
-          height: 11rem
+  .cart-empty
+    display: flex
+    flex-direction: column
+    gap: 3rem
+    justify-content: center
+    padding: 8rem 0
 
-        &__content
-          max-width: 13rem
-          background: transparent
+    *
+      text-align: center
 
-          *
-            text-align: left
-
-        &__params
-          display: flex
-          flex-direction: column
-          gap: 1rem
-
-        &__price
-          display: grid
-          grid-template-columns: repeat(2, 1fr)
-
-          .product__value
-            grid-column-start: 1
-            grid-column-end: 3
-
+    .button
+      display: inline-flex

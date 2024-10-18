@@ -28,9 +28,17 @@
     @include tablet
       @include flex-column
 
+    .col-3
+      grid-column-start: 1
+      grid-column-end: 4
+
     .col-2-start
       grid-column-start: 1
       grid-column-end: 3
+
+    .col-2-end
+      grid-column-start: 2
+      grid-column-end: 4
 
   &-4
     grid-template-columns: repeat(4, calc(25% - 1.5rem))

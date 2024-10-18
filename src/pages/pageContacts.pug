@@ -1,0 +1,135 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-contacts'
+
+block content
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=a05aacec-6f3a-46fa-a45b-ad4882c9f689&lang=ru_RU" type="text/javascript")
+
+    section
+        .section__header
+            ul.breadcrumbs
+                li.breadcrumbs__el
+                    a(href='') Главная
+                li.breadcrumbs__el
+                    span Контакты
+
+            h1 Контакты
+
+        .contacts
+            .contacts__header
+                .details__header
+                    svg(width=46 height=46 fill='none')
+                        use(xlink:href='/public/sprite.svg#icon--build')
+                    span.subtitle-2 Офис и контакты
+
+            .contacts__offices
+                .address
+                    .address__left
+                        .address__container
+                            span
+                                strong Адрес офиса:
+                            span.c-gray г. Москва, ул. Полбина д. 3 ст3
+                        .address__container
+                            img(src='/src/assets/images/map--office.jpg' alt='Офис')
+                        .address__container
+                            span
+                                strong График
+                            span.c-gray Пн, Вт, Ср, Чт, Пт - с 08:00 до 20:00
+                            span.c-gray Сб, Вс - выходной
+                        .address__container
+                            span
+                                strong Контакты:
+
+                            a(href='tel:87483233344')
+                                svg(width=24 height=24 fill='none').c-gray
+                                    use(xlink:href='/public/sprite.svg#icon--phone')
+
+                                span.c-red + 7 (748) 323 - 33 - 44
+
+                            a(href='mailto:yourentme@me.ru')
+                                svg(width=24 height=24 fill='none').c-gray
+                                    use(xlink:href='/public/sprite.svg#icon--mail')
+
+                                span.c-red yourentme@me.ru
+
+                        .address__container
+                            ul.social
+                                li
+                                    a(href='')
+                                        svg(width=24 height=24 fill='transparent')
+                                            use(xlink:href='/public/sprite.svg#icon--telegram')
+                                li
+                                    a(href='')
+                                        svg(width=24 height=24 fill='transparent')
+                                            use(xlink:href='/public/sprite.svg#icon--whatsapp')
+
+                    .address__center
+                        span
+                            strong Как добраться:
+
+                        .routes
+                            .route
+                                p
+                                    span.c-red 1. Автобус:
+                                    =" "
+                                    | 123 автобус от станции метро Печатники. Остановка "Рентген"
+                            .route
+                                p
+                                    span.c-red 2. МЦД:
+                                    =" "
+                                    | 5 минут пешком от станции D2 Люблино
+                            .route
+                                p
+                                    span.c-red 3.
+                                    =" "
+                                    | Автомобиль: Заезд со стороны Батайской улицы, посигнальте перед воротами и проезжайте во двор
+
+                    .address__right
+                        div(id='officeMap').map
+
+
+        .contacts
+            .contacts__header
+                .details__header
+                    svg(width=46 height=46 fill='none')
+                        use(xlink:href='/public/sprite.svg#icon--self-delivery')
+                    span.subtitle-2 Самовывоз из&nbsp;пункта выдачи
+
+            .contacts__points
+                .address
+                    // класс .js--control-map добавляет переключение карты при клике на пункты списка
+                    .address__left.js--control-map
+                        div(data-lat='55.753994' data-lan='37.622093').address__container.active
+                            span
+                                strong Адрес: г. Москва, ул. Полбина д. 3 ст3
+                            span.c-gray Пн - пт: с 09 до 18:00
+                            span.c-gray Сб - Вс: Выходной
+
+                        div(data-lat='55.907228' data-lan='31.260503').address__container
+                            span
+                                strong Адрес: г. Москва, ул. Полбина д. 3 ст3
+                            span.c-gray Пн - пт: с 09 до 18:00
+                            span.c-gray Сб - Вс: Выходной
+
+                    .address__right
+                        div(id='pointsMap').map
+
+    section
+        .row.row-2
+            .information
+                h3 Сведения о юр лице
+
+                ul.information__list
+                    li
+                        span.information__name ОРГНИП
+                        span.information__value 1111111111111111111
+                    li
+                        span.information__name ИНН
+                        span.information__value 111111111111
+                    li
+                        span.information__name Вид предпринимательства
+                        span.information__value Индивидуальный предприниматель
+                    li
+                        span.information__name Дата регистрации
+                        span.information__value 12 января 2020

@@ -3,6 +3,71 @@
   border: 2px solid $gray-light
   overflow: hidden
 
+  &.product-additionally
+    flex-direction: column
+    display: flex
+    @include gray-bg
+    padding: 1.2rem
+
+    .product__additionally
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      .product__percent
+        font-size: 1.4rem
+        padding: 2px 5px
+
+      .add
+        background: $white
+        width: 2.4rem !important
+        height: 2.4rem
+        border-radius: 100%
+        @include transition
+
+        &:hover
+          background: $red
+          color: $white
+
+    .product__images
+      height: 14rem
+      text-align: center
+      transform: translateY(-1rem)
+
+      img
+        max-width: 95%
+        max-height: 95%
+
+    .product__content
+      padding: 0
+      gap: 1rem
+
+      *
+        text-align: center
+
+      .product__value
+        @include subtitle2
+        padding: 4px
+        width: 100%
+        border-radius: 2rem
+        background: $white
+
+        small
+          font-size: 1.6rem
+
+  &.product-order
+    background: $white
+    border-radius: 2rem
+    display: grid
+    gap: 1rem
+    grid-template-columns: 5rem 1fr 5rem 10rem
+    padding: 1rem 2rem
+    align-items: center
+
+    .product__content
+      padding: 0
+      background: transparent
+
   &.product-horisontal
     display: flex
     align-items: stretch
@@ -197,7 +262,14 @@
 
     button
       color: $gray
-      font-size: 3.4rem
+      font-size: 3rem
+      font-weight: 400
+      line-height: 2rem
+      min-width: 1.8rem
+      text-align: center
+
+      &.minus
+        transform: translateY(-3px)
 
     input
       border: none

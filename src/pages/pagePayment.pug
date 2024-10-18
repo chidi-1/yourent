@@ -1,0 +1,120 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-payment'
+
+block content
+    section
+        .row.row-2
+            .payment
+                .payment__container
+                    .payment__header                        span.subtitle-1 Безопасная оплата
+                        svg(width=24 height=24 fill='transparent')
+                            use(xlink:href='/public/sprite.svg#icon--lock')
+
+                    p Оплата производится с&nbsp;помощью
+                        =" "
+                        a(href='') платежной системы СБП
+                        | , при нажатии на&nbsp;кнопку &laquo;Оплатить&raquo;, вы&nbsp;будете перенаправлены  в&nbsp;ваше банковское приложение.
+
+                .payment__container
+                    .payment__header
+                        span.subtitle-1 Скачайте договор
+                        svg(width=24 height=24 fill='transparent')
+                            use(xlink:href='/public/sprite.svg#icon--note')
+
+                    p Скачайте договор&nbsp;Вы можете скачать свой договор по&nbsp;
+                        a(href='') ссылке
+
+                .payment__container
+                    .payment__header
+                        span.subtitle-1 Контакты для связи
+                        svg(width=24 height=24 fill='transparent')
+                            use(xlink:href='/public/sprite.svg#icon--user')
+
+                    ul.social
+                        li
+                            a(href='')
+                                svg(width=24 height=24 fill='transparent')
+                                    use(xlink:href='/public/sprite.svg#icon--telegram')
+                        li
+                            a(href='')
+                                svg(width=24 height=24 fill='transparent')
+                                    use(xlink:href='/public/sprite.svg#icon--whatsapp')
+                        li
+                            a(href='')
+                                svg(width=24 height=24 fill='transparent').c-red
+                                    use(xlink:href='/public/sprite.svg#icon--phone')
+
+            .order
+                h3 Заказ
+                    =" "
+                    span.c-red 7980
+
+                .products
+                    .product.product-order
+                        .product__image
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .product__content
+                            p.semibold Палатка двухместная автоматическая серая Dallas 2
+
+                        .product__quantity
+                            span 1 шт
+
+                        .product__price
+
+                            span.product__value 7800 ₽
+
+                    .product.product-order
+                        .product__image
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .product__content
+                            p.semibold Палатка двухместная автоматическая серая Dallas 2
+
+                        .product__quantity
+                            span 1 шт
+
+                        .product__price
+                            span.product__value 7800 ₽
+
+                    .product.product-order
+                        .product__image
+                            picture
+                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+
+                        .product__content
+                            p.semibold Палатка двухместная автоматическая серая Dallas 2
+
+                        .product__quantity
+                            span 1 шт
+
+                        .product__price
+                            span.product__value 7800 ₽
+
+                .total
+                    ul.total__list
+                        li
+                            span.total__param Срок аренды
+                            span.total__value 16 дней
+                        li
+                            span.total__param Размер скидки
+                            span.total__value.discount -450 ₽
+                        li
+                            span.total__param Товары (1)
+                            span.total__value 3689 ₽
+                        li
+                            span.total__param Залог
+                            span.total__value.c-gray-text 13400 ₽
+
+                    .total__buttons
+                        .value
+                            p.subtitle-1 К оплате:
+                                span.h3  14400 ₽
+                        a(href='').button.button-red Оплатить 14400 ₽

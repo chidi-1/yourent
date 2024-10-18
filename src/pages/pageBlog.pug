@@ -1,0 +1,116 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-blog'
+
+block content
+    section
+        .section__header
+            ul.breadcrumbs
+                li.breadcrumbs__el
+                    a(href='') Главная
+                li.breadcrumbs__el
+                    span Блог
+
+        h1 Блог
+
+        .tags
+            a(href='').tag.active
+                span Все
+            a(href='').tag
+                img(src='/src/assets/images/icon--filter-1.svg' alt='')
+                span Стройка
+            a(href='').tag
+                img(src='/src/assets/images/icon--filter-2.svg' alt='')
+                span Путешествия
+            a(href='').tag
+                img(src='/src/assets/images/icon--filter-3.svg' alt='')
+                span Вечеринка
+            a(href='').tag
+                img(src='/src/assets/images/icon--filter-4.svg' alt='')
+                span ХОбби
+            a(href='').tag
+                img(src='/src/assets/images/icon--filter-5.svg' alt='')
+                span Отдых
+
+        ul.blog
+            li.blog__el
+                .blog__image
+                    img(src='/src/assets/images/img--blog.jpg' alt='')
+                    .tag
+                        img(src='/src/assets/images/icon--filter-1.svg' alt='')
+                        span Стройка
+
+                .blog__content
+                    a(href='').subtitle-2.c-red Подготовка к ремонту
+                    p Советы по планированию и организации рабочего процесса.
+            li.blog__el
+                .blog__image
+                    img(src='/src/assets/images/img--blog.jpg' alt='')
+                    .tag
+                        img(src='/src/assets/images/icon--filter-1.svg' alt='')
+                        span Стройка
+
+                .blog__content
+                    a(href='').subtitle-2.c-red Подготовка к ремонту
+                    p Советы по планированию и организации рабочего процесса.
+            li.blog__el
+                .blog__image
+                    img(src='/src/assets/images/img--blog.jpg' alt='')
+                    .tag
+                        img(src='/src/assets/images/icon--filter-1.svg' alt='')
+                        span Стройка
+
+                .blog__content
+                    a(href='').subtitle-2.c-red Подготовка к ремонту
+                    p Советы по планированию и организации рабочего процесса.
+            li.blog__el
+                .blog__image
+                    img(src='/src/assets/images/img--blog.jpg' alt='')
+                    .tag
+                        img(src='/src/assets/images/icon--filter-1.svg' alt='')
+                        span Стройка
+
+                .blog__content
+                    a(href='').subtitle-2.c-red Подготовка к ремонту
+                    p Советы по планированию и организации рабочего процесса.
+            li.blog__el
+                .blog__image
+                    img(src='/src/assets/images/img--blog.jpg' alt='')
+                    .tag
+                        img(src='/src/assets/images/icon--filter-1.svg' alt='')
+                        span Стройка
+
+                .blog__content
+                    a(href='').subtitle-2.c-red Подготовка к ремонту
+                    p Советы по планированию и организации рабочего процесса.
+            li.blog__el
+                .blog__image
+                    img(src='/src/assets/images/img--blog.jpg' alt='')
+                    .tag
+                        img(src='/src/assets/images/icon--filter-1.svg' alt='')
+                        span Стройка
+
+                .blog__content
+                    a(href='').subtitle-2.c-red Подготовка к ремонту
+                    p Советы по планированию и организации рабочего процесса.
+            li.blog__el
+                .blog__image
+                    img(src='/src/assets/images/img--blog.jpg' alt='')
+                    .tag
+                        img(src='/src/assets/images/icon--filter-1.svg' alt='')
+                        span Стройка
+
+                .blog__content
+                    a(href='').subtitle-2.c-red Подготовка к ремонту
+                    p Советы по планированию и организации рабочего процесса.
+
+        .pagination
+            span.pagination__el 1
+            a(href='').pagination__el 2
+            a(href='').pagination__el 3
+            a(href='').pagination__el.dots
+                svg(width=24 height=24 fill='none')
+                    use(xlink:href='/public/sprite.svg#icon--dots')
+            a(href='').pagination__el 11
+            a(href='').pagination__el 12
