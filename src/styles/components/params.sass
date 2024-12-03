@@ -1,0 +1,52 @@
+.params
+  display: flex
+  flex-direction: column
+  gap: 3rem
+
+  @include tablet
+    width: 100%
+
+  &__container
+    background: $gray-light
+    border-radius: 2rem
+    padding: 2rem
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    gap: 2rem
+
+    .button
+      display: inline-flex
+      width: auto
+
+  &__list
+    display: flex
+    width: 100%
+    flex-direction: column
+    gap: 2rem
+
+    @include mobile
+      gap: 1rem
+
+    li
+      display: flex
+      gap: 1rem
+      align-items: flex-start
+      justify-content: space-between
+
+      @include mobile
+        flex-direction: column
+        gap: 0
+
+      .name
+        @include subtitle2
+
+        @include mobile
+          font-size: 1.6rem
+
+      .value
+        color: $gray-text
+        font-weight: 600
+
+        @include mobile
+          font-size: 1.4rem

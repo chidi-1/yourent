@@ -5,6 +5,9 @@
     align-items: stretch
     gap: 2rem
 
+    @include mobile
+      gap: 1rem
+
 .step
   padding: 2.75rem 2rem
   border-radius: 2rem
@@ -13,20 +16,34 @@
   gap: 1rem
   width: calc((100% + 2rem)/3 - 2rem)
 
+  @include tablet
+    width: calc((100% + 2rem)/2 - 2rem)
+  @include mobile
+    width: 100%
+
   &-l
     width: calc(50% - 1rem)
 
+    @include mobile
+      width: 100%
+
   &__number
-    font-size: 9.6rem
-    line-height: 1
+    font-size: 13rem
+    line-height: .7
     color: $pink
     font-weight: 700
+    margin-left: -1rem
 
   &__text
     padding-top: 1rem
     display: flex
     flex-direction: column
     gap: 1rem
+    font-weight: 600
+
+    @include mobile
+      font-size: 1.4rem
+      line-height: 1.2
 
     p
       color: $gray-text

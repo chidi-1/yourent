@@ -12,7 +12,27 @@
       display: grid
       grid-template-columns: 26.5rem repeat(2, 1fr)
 
+      @include tablet
+        grid-template-columns: 26.5rem 1fr
+      @include  mobile
+        display: flex
+        flex-direction: column
+
+      &__right
+        @include tablet
+          grid-column-start: 1
+          grid-column-end: 3
+
+        .map
+          @include tablet
+            height: 30rem
+
   .contacts__points
+
+    .address
+      @include tablet
+        grid-template-columns: 1fr
+
     .address__container
       background: $gray-light
 
@@ -21,6 +41,10 @@
 
     .map
       min-height: 57.5rem
+
+      @include tablet
+        min-height: 30rem
+        max-height: 30rem
 
   .contacts
     border: 2px solid $red
@@ -51,6 +75,9 @@
       li
         display: flex
         justify-content: space-between
+
+        @include  mobile
+          flex-direction: column
 
         span
           max-width: 70%

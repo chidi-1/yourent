@@ -6,31 +6,26 @@ header.header
     .header__top
         .container
             .justify
-                .info
-                    .info__el.location
+                .hinfo
+                    button(data-fancybox data-src='#towns').hinfo__el.location.js--select-town
                         svg(width=24 height=24 fill="none")
                             use(xlink:href='/public/sprite.svg#icon--location')
                         span Москва
                         svg(width=24 height=24)
                             use(xlink:href='/public/sprite.svg#angle--bottom')
-                        ul.location__list
-                            li.location__el
-                                a(href='') Город 1
-                            li.location__el
-                                a(href='') Город 2
 
-                    .info__el
+                    .hinfo__el
                         svg(width=24 height=24 fill="none")
                             use(xlink:href='/public/sprite.svg#icon--clock')
                         span Ежедневно с&nbsp;8&nbsp;до&nbsp;21&nbsp;по&nbsp;Москве
 
                 .contacts
-                    .contacts__el
+                    button(data-fancybox data-src='#call').contacts__el
                         svg(width=24 height=24 fill="none")
                             use(xlink:href='/public/sprite.svg#icon--phone')
                         span Перезвоните мне
 
-                    a(href='mailto:').contacts__el
+                    a(href='mailto:mailto@sdf.com').contacts__el
                         svg(width=24 height=24 fill="none")
                             use(xlink:href='/public/sprite.svg#icon--mail')
                         span Почта
@@ -44,6 +39,8 @@ header.header
                         svg(width=24 height=24 fill="none")
                             use(xlink:href='/public/sprite.svg#icon--telegram')
 
+                    .hamburger.js--toggle-menu
+                        span
 
     .header__bottom
         .header__links
@@ -51,7 +48,7 @@ header.header
                 .justify
                     nav.header__navigation
                         a(href='').logo
-                            span logo
+                            img(src='/src/assets/images/logo.svg' alt='лого')
 
                         a(href='').catalog.button.button-red
                             svg(width=24 height=24 fill="none")
@@ -62,18 +59,15 @@ header.header
                             li.nav__el
                                 a(href='') Главная
                             li.nav__el
-                                a(href='') Условия проката
-                            li.nav__el
-                                a(href='') Скидки
+                                a(href='') Условия аренды
                             li.nav__el
                                 a(href='') Контакты
+                            li.nav__el
+                                a(href='') Страхование аренды
 
                     .header__control
                         form(action='' method='').search
-                            button(type='button').button.button-gray.search__clear
-                                svg(width=24 height=24 fill="none")
-                                    use(xlink:href='/public/sprite.svg#icon--close')
-                            input(type='text' name='' placeholder='Поиск по сайту')
+                            input(type='text' name='' placeholder='Поиск по сайту').js--search
                             button(type='submit').button.button-gray.search__icon
                                 svg(width=24 height=24 fill="none")
                                     use(xlink:href='/public/sprite.svg#icon--search')
@@ -82,6 +76,9 @@ header.header
                             svg(width=24 height=24 fill="none")
                                 use(xlink:href='/public/sprite.svg#icon--cart')
                             span.counter 2
+
+                        button.no-style.mobile-search-toggle.js--toggle-search
+
 
         .header__categories
             .container
@@ -93,6 +90,21 @@ header.header
                     a(href='').button.button-gray Строй инструменты
                     a(href='').button.button-gray Проекторы и&nbsp;TV
                     a(href='').button.button-gray Пылесосы
-                    button.button.button-gray.more
+                    button(data-fancybox data-src='#more').button.button-gray.more
                         svg(width=24 height=24 fill="none")
                             use(xlink:href='/public/sprite.svg#icon--dots')
+
+
+    .header__result.hidden
+        .background
+        .content
+            .text-right
+                button.no-style.button-close.js--close-search
+                    svg(width=24 height=24)
+                        use(xlink:href='/public/sprite.svg#icon--close-red')
+
+            include product-slider-cart-inner
+
+            h3.h3 Перейти в раздел
+
+            include subccategories__list

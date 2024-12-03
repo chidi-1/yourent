@@ -1,10 +1,14 @@
 .cart
-  padding: 2rem
+  padding: 3rem
   background: $gray-light
   border-radius: 2rem
   display: flex
   flex-direction: column
   gap: 2rem
+
+  @include mobile
+    padding: 2rem
+    gap: 1.5rem
 
   hr
     display: block
@@ -34,14 +38,27 @@
       align-items: center
       justify-content: space-between
 
+      @include tablet
+        gap: .5rem
+      @include mobile
+        grid-template-columns: calc(33.3% - .5rem) calc(66.6% - .5rem)
+        gap: 1rem
+        padding: 1rem
+        background: $white
+        position: relative
+
       &__image
         background: transparent
         border-radius: 0
         width: 12rem
         height: 11rem
 
+        @include mobile
+          width: 7.5rem
+          height: 7.5rem
+
       &__content
-        width: 100%
+        width: 100% !important
         background: transparent
         padding: 0
         gap: 1rem
@@ -53,16 +70,65 @@
           font-size: 1.4rem
           line-height: 1.4
           font-weight: 400
+          text-align: left
+
+      &__quantity
+        @include mobile
+          grid-column-start: 1
+          grid-column-end: 3
+          grid-row-start: 3
+          grid-row-end: 4
+          justify-content: space-between
+
+        input
+          @include mobile
+            max-width: calc(100% - 3rem)
 
       &__params
         display: flex
         flex-direction: column
         gap: 1rem
 
+        @include mobile
+          grid-column-start: 1
+          grid-column-end: 3
+          grid-row-start: 2
+          grid-row-end: 3
+
         .product__deposit
           font-size: 1.4rem
           padding: 0
           border: none
+
+          @include mobile
+            display: none
+
+        .product__price
+          @include mobile
+            grid-template-columns: 1fr 2fr 1fr
+
+          .product__percent
+            @include mobile
+              grid-column-start: 1
+              grid-column-end: 2
+              grid-row-start: 1
+              grid-row-end: 2
+
+          .product__value
+            @include mobile
+              grid-column-start: 2
+              grid-column-end: 3
+              grid-row-start: 1
+              grid-row-end: 2
+              text-align: center
+              font-size: 2rem
+
+          .product__discount
+            @include mobile
+              grid-column-start: 3
+              grid-column-end: 4
+              grid-row-start: 1
+              grid-row-end: 2
 
       &__price
         display: grid
@@ -86,6 +152,11 @@
           border: none
 
       &__remove
+        @include mobile
+          position: absolute
+          top: 1rem
+          right: 1rem
+
         button
           &:hover
             svg

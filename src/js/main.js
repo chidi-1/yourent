@@ -5,7 +5,6 @@ import IMask from 'imask';
 
 document.addEventListener("DOMContentLoaded", () => {
     // слайдеры
-
     if (document.querySelectorAll('.js--products-slider .swiper-slide').length > 0) {
         document.querySelectorAll('.js--products-slider').forEach(item => {
             let prevButton = item.closest('section').querySelector('.swiper-button-prev')
@@ -14,19 +13,24 @@ document.addEventListener("DOMContentLoaded", () => {
             var slider = new Swiper(item, {
                 loop: true,
                 spaceBetween: 25,
-                slidesPerView: 3,
+                slidesPerView: 2,
                 navigation: {
                     nextEl: nextButton,
                     prevEl: prevButton,
                 },
                 breakpoints: {
                     320: {
-                        slidesPerView: 3,
+                        spaceBetween: 20,
+                        slidesPerView: 1,
                     },
                     780: {
-                        slidesPerView: 4,
+                        slidesPerView: 3,
                     },
                     1024: {
+                        slidesPerView: 4,
+                    },
+                    1280: {
+                        spaceBetween: 25,
                         slidesPerView: 5,
                     },
                 },
@@ -49,9 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 breakpoints: {
                     320: {
-                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        slidesPerView: 2,
                     },
                     1024: {
+                        spaceBetween: 20,
                         slidesPerView: 2,
                     },
                 },
@@ -67,13 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
             var slider = new Swiper(item, {
                 loop: true,
                 spaceBetween: 20,
-                slidesPerView: 3,
+                slidesPerView: 1,
                 navigation: {
                     nextEl: nextButton,
                     prevEl: prevButton,
                 },
                 breakpoints: {
-                    640: {
+                    320: {
                         slidesPerView: 1,
                     },
                     780: {
@@ -87,30 +93,97 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    if (document.querySelectorAll('.js--products-slider-cart .swiper-slide').length > 0) {
-        document.querySelectorAll('.js--products-slider-cart').forEach(item => {
+    if (document.querySelectorAll('.js--structure-slider .swiper-slide').length > 0) {
+        document.querySelectorAll('.js--structure-slider').forEach(item => {
             let prevButton = item.closest('section').querySelector('.swiper-button-prev')
             let nextButton = item.closest('section').querySelector('.swiper-button-next')
 
             var slider = new Swiper(item, {
                 loop: true,
                 spaceBetween: 20,
-                slidesPerView: 3,
                 navigation: {
                     nextEl: nextButton,
                     prevEl: prevButton,
                 },
                 breakpoints: {
-                    640: {
-                        slidesPerView: 3,
-                    },
-                    780: {
-                        slidesPerView: 5,
+                    320: {
+                        slidesPerView: 2,
                     },
                     1024: {
-                        slidesPerView: 7,
+                        slidesPerView: 3,
                     },
                 },
+            });
+        })
+    }
+
+    if (document.querySelectorAll('.js--products-slider-cart .swiper-slide').length > 0) {
+        document.querySelectorAll('.js--products-slider-cart').forEach(item => {
+            if (item.closest('.header')) {
+                var slider = new Swiper(item, {
+                    loop: true,
+                    spaceBetween: 20,
+                    slidesPerView: 3,
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 2,
+                        },
+                        780: {
+                            slidesPerView: 4,
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                        },
+                        1280: {
+                            slidesPerView: 7,
+                        },
+                    },
+                });
+            } else {
+                let prevButton = item.closest('section').querySelector('.swiper-button-prev')
+                let nextButton = item.closest('section').querySelector('.swiper-button-next')
+
+                var slider = new Swiper(item, {
+                    loop: true,
+                    spaceBetween: 20,
+                    slidesPerView: 3,
+                    navigation: {
+                        nextEl: nextButton,
+                        prevEl: prevButton,
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 2,
+                        },
+                        780: {
+                            slidesPerView: 4,
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                        },
+                        1280: {
+                            slidesPerView: 7,
+                        },
+                    },
+                });
+            }
+        })
+    }
+
+    if (document.querySelectorAll('.js--mobile-categories .swiper-slide').length > 0 && window.innerWidth < 780) {
+        document.querySelectorAll('.js--mobile-categories').forEach(item => {
+            var slider = new Swiper(item, {
+                spaceBetween: 0,
+                slidesPerView: 1,
+            });
+        })
+    }
+
+    if (document.querySelectorAll('.js--mobile-subcategories .swiper-slide').length > 0 && window.innerWidth < 780) {
+        document.querySelectorAll('.js--mobile-subcategories').forEach(item => {
+            var slider = new Swiper(item, {
+                spaceBetween: 20,
+                slidesPerView: 2,
             });
         })
     }
@@ -258,4 +331,73 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // табы
+    const tabs = document.querySelectorAll('.tabs__caption')
+    if (tabs.length) {
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', function (event) {
+                let target = event.target
+                if (!target.classList.contains('active')) {
+                    let container = target.closest('.tabs');
+                    let tabs = target.closest('.tabs__caption');
+                    let tabsList = Array.from(tabs.children);
+                    let index = tabsList.indexOf(target);
+                    if (container.querySelector('li.active')) {
+                        container.querySelector('li.active').classList.remove('active');
+                    }
+                    if (container.querySelector('.tabs__content.active')) {
+                        container.querySelector('.tabs__content.active').classList.remove('active');
+                    }
+                    container.getElementsByClassName('tabs__content')[index].classList.add('active');
+                    target.classList.add('active');
+                }
+            })
+        });
+    }
+
+    // мобильное меню
+    document.querySelector('.js--toggle-menu').addEventListener('click', () => {
+        document.querySelector('.header').classList.toggle('open')
+    })
+
+    // поиск
+
+    document.querySelector('.js--search').addEventListener('input', (e) => {
+        let value = e.target.value;
+
+        if(value.length  === 0) {
+            hidesearchResult();
+        } else {
+            if(value.length > 3) {
+                console.log('length')
+                // запрос на получение результатов поиска
+                updateSearchResult();
+                setSearchResultParams();
+            }
+        }
+    })
+
+    document.querySelector('.js--toggle-search').addEventListener('click', (e) => {
+        document.querySelector('.header .search').classList.toggle('visible')
+        e.target.classList.toggle('close');
+    })
+
+    document.querySelector('.js--close-search').addEventListener('click', (e) => {
+        hideSearchResult()
+    })
+
+    function setSearchResultParams() {
+        let header = document.querySelector('.header')
+        let searchContainer = document.querySelector('.header__result')
+        searchContainer.style.top = header.offsetHeight + 'px';
+        searchContainer.style.height = `calc(100vh - ${header.offsetHeight}px)`
+        searchContainer.classList.remove('hidden');
+        document.querySelector('body').classList.add('fixed')
+    }
+    function hideSearchResult () {
+        document.querySelector('.header__result').classList.add('hidden');
+        document.querySelector('body').classList.remove('fixed')
+    }
+    function  updateSearchResult() {
+    }
 })

@@ -5,9 +5,21 @@
   &__top
     margin-bottom: 4rem
 
+    @include  mobile
+      margin-bottom: 2rem
+
     .justify
       align-items: flex-start
       gap: 4rem
+
+      @include tablet
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 2rem
+
+      @include  mobile
+        display: flex
+        flex-direction: column
 
     .logo
       width: 15.8rem
@@ -27,6 +39,29 @@
     flex-direction: column
     gap: 2rem
 
+    @include  mobile
+      gap: 1rem
+
+    &:nth-child(5)
+      @include tablet
+        grid-row-start: 1
+        grid-row-end: 2
+        grid-column-start: 2
+        grid-column-end: 4
+        text-align: right
+        display: block
+      @include  mobile
+        width: 100%
+
+    &:nth-child(4)
+      h3
+        @include  mobile
+          display: none
+
+      .nav__list
+        @include  mobile
+          flex-direction: row
+
   .nav__list
     display: flex
     flex-direction: column
@@ -34,8 +69,14 @@
 
     .nav__el
       display: block
+      color: $gray
 
       a
+        font-weight: 600
+
+        @include  mobile
+          font-size: 1.4rem
+
         &:hover
           color: $red
 
@@ -45,6 +86,13 @@
     background: $white
     padding: 3rem
     border-radius: 4.8rem
+
+    @include tablet
+      display: inline-flex
+    @include  mobile
+      display: flex
+      width: 100%
+      padding: 1rem
 
     .button
       padding: 0
@@ -58,15 +106,38 @@
         background: $red
         color: $white
 
+  &__bottom
+    .justify
+      @include tablet
+        gap: 1rem
+        justify-content: flex-start
+        flex-direction: column
+      @include  mobile
+        align-items: flex-start
+
   &__banks,
   &__copyright
     display: flex
     align-items: center
     gap: 2rem
+    font-weight: 600
+
+    @include  mobile
+      justify-content: flex-start
+      gap: 1rem
 
     *
       color: $gray
 
+      @include  mobile
+        font-size: 1.4rem
+
     a
       &:hover
         color: $red
+
+  &__copyright
+    @include  mobile
+      gap: .5rem
+      flex-direction: column
+      align-items: flex-start

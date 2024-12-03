@@ -37,189 +37,186 @@ block content
     section.travel
         h2 Отправиться в&nbsp;путешествие
 
-        .categories__list
-            a(href='').category
-                picture.category__img
-                    source(type='image/webp' srcset='/src/assets/images/img--category-1.webp')
-                    img(src='/src/assets/images/img--category-1.png')
+        .categories__list.js--mobile-categories
+            .swiper-wrapper
+                .swiper-slide
+                    a(href='').category
+                        picture.category__img
+                            source(type='image/webp' srcset='/src/assets/images/img--category-1.webp')
+                            img(src='/src/assets/images/img--category-1.png')
 
-                span.category__name Палатки
+                        span.category__name Палатки
 
-            a(href='').category
-                picture.category__img
-                    source(type='image/webp' srcset='/src/assets/images/img--category-2.webp')
-                    img(src='/src/assets/images/img--category-2.png')
+                .swiper-slide
+                    a(href='').category
+                        picture.category__img
+                            source(type='image/webp' srcset='/src/assets/images/img--category-2.webp')
+                            img(src='/src/assets/images/img--category-2.png')
 
-                span.category__name Спальные мешки
+                        span.category__name Спальные мешки
 
-            a(href='').category
-                picture.category__img
-                    source(type='image/webp' srcset='/src/assets/images/img--category-3.webp')
-                    img(src='/src/assets/images/img--category-3.png')
+                .swiper-slide
+                    a(href='').category
+                        picture.category__img
+                            source(type='image/webp' srcset='/src/assets/images/img--category-3.webp')
+                            img(src='/src/assets/images/img--category-3.png')
 
-                span.category__name Рюкзаки
+                        span.category__name Рюкзаки
 
-            a(href='').category
-                picture.category__img
-                    source(type='image/webp' srcset='/src/assets/images/img--category-4.webp')
-                    img(src='/src/assets/images/img--category-4.png')
+                .swiper-slide
+                    a(href='').category
+                        picture.category__img
+                            source(type='image/webp' srcset='/src/assets/images/img--category-4.webp')
+                            img(src='/src/assets/images/img--category-4.png')
 
-                span.category__name Газовые горелки
+                        span.category__name Газовые горелки
 
-        .row.row-4
-            .product
-                .product__images
-                    .tabs
-                        ul.tabs__caption
-                            li.active
-                            li
+        .mobile-slider.js--mobile-categories
+            .swiper-wrapper.row.row-4
+                .swiper-slide
+                    .product
+                        .product__images
+                            .tabs
+                                ul.tabs__caption
+                                    li.active
+                                    li
 
-                        .tabs__content.active
-                            picture
-                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                                .tabs__content.active
+                                    picture
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
-                        .tabs__content
-                            picture
-                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                                .tabs__content
+                                    picture
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
-                .product__content
-                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
-                    span.product__available.c-green Доступно к аренде
-                    .product__price
-                        span.product__percent -22%
-                        span.product__value 600
-                            =" "
-                            small ₽/месяц
-                        span.product__discount 500 ₽
-                    span.product__permonth 5600
-                        =" "
-                        small ₽/месяц
-                    span.product__deposit Залог 101.500 ₽
-                    button.button.button-red.button-small
-                        svg(width=24 height=24 fill='none')
-                            use(xlink:href='/public/sprite.svg#icon--cart')
-                        span В корзину
-            .product
-                .product__images
-                    .tabs
-                        ul.tabs__caption
-                            li.active
-                            li
+                        .product__content
+                            p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                            span.product__available.c-green Доступно к аренде
+                            .product__price
+                                span.product__percent -22%
+                                span.product__value 600
+                                    =" "
+                                    small ₽/месяц
+                                span.product__discount 500 ₽
+                            span.product__permonth 5600
+                                =" "
+                                small ₽/месяц
+                            span.product__deposit Залог 101.500 ₽
+                            button.button.button-red.button-small
+                                svg(width=24 height=24 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--cart')
+                                span В корзину
+                .swiper-slide
+                    .product
+                        .product__images
+                            .tabs
+                                ul.tabs__caption
+                                    li.active
+                                    li
 
-                        .tabs__content.active
-                            picture
-                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                                .tabs__content.active
+                                    picture
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
-                        .tabs__content
-                            picture
-                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                                .tabs__content
+                                    picture
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
-                .product__content
-                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
-                    span.product__available.c-green Доступно к аренде
-                    .product__price
-                        span.product__percent -22%
-                        span.product__value 600
-                            =" "
-                            small ₽/месяц
-                        span.product__discount 500 ₽
-                    span.product__permonth 5600
-                        =" "
-                        small ₽/месяц
-                    span.product__deposit Залог 101.500 ₽
-                    button.button.button-red.button-small
-                        svg(width=24 height=24 fill='none')
-                            use(xlink:href='/public/sprite.svg#icon--cart')
-                        span В корзину
-            .product
-                .product__images
-                    .tabs
-                        ul.tabs__caption
-                            li.active
-                            li
+                        .product__content
+                            p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                            span.product__available.c-green Доступно к аренде
+                            .product__price
+                                span.product__percent -22%
+                                span.product__value 600
+                                    =" "
+                                    small ₽/месяц
+                                span.product__discount 500 ₽
+                            span.product__permonth 5600
+                                =" "
+                                small ₽/месяц
+                            span.product__deposit Залог 101.500 ₽
+                            button.button.button-red.button-small
+                                svg(width=24 height=24 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--cart')
+                                span В корзину
+                .swiper-slide
+                    .product
+                        .product__images
+                            .tabs
+                                ul.tabs__caption
+                                    li.active
+                                    li
 
-                        .tabs__content.active
-                            picture
-                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                                .tabs__content.active
+                                    picture
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
-                        .tabs__content
-                            picture
-                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                                .tabs__content
+                                    picture
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
-                .product__content
-                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
-                    span.product__available.c-green Доступно к аренде
-                    .product__price
-                        span.product__percent -22%
-                        span.product__value 600
-                            =" "
-                            small ₽/месяц
-                        span.product__discount 500 ₽
-                    span.product__permonth 5600
-                        =" "
-                        small ₽/месяц
-                    span.product__deposit Залог 101.500 ₽
-                    button.button.button-red.button-small
-                        svg(width=24 height=24 fill='none')
-                            use(xlink:href='/public/sprite.svg#icon--cart')
-                        span В корзину
-            .product
-                .product__images
-                    .tabs
-                        ul.tabs__caption
-                            li.active
-                            li
+                        .product__content
+                            p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                            span.product__available.c-green Доступно к аренде
+                            .product__price
+                                span.product__percent -22%
+                                span.product__value 600
+                                    =" "
+                                    small ₽/месяц
+                                span.product__discount 500 ₽
+                            span.product__permonth 5600
+                                =" "
+                                small ₽/месяц
+                            span.product__deposit Залог 101.500 ₽
+                            button.button.button-red.button-small
+                                svg(width=24 height=24 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--cart')
+                                span В корзину
+                .swiper-slide
+                    .product
+                        .product__images
+                            .tabs
+                                ul.tabs__caption
+                                    li.active
+                                    li
 
-                        .tabs__content.active
-                            picture
-                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                                .tabs__content.active
+                                    picture
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
-                        .tabs__content
-                            picture
-                                source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
-                                img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
+                                .tabs__content
+                                    picture
+                                        source(type='image/webp' srcset='/src/assets/images/dallas-2.webp')
+                                        img(src='/src/assets/images/dallas-2.webp' alt='dallas-2')
 
-                .product__content
-                    p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
-                    span.product__available.c-green Доступно к аренде
-                    .product__price
-                        span.product__percent -22%
-                        span.product__value 600
-                            =" "
-                            small ₽/месяц
-                        span.product__discount 500 ₽
-                    span.product__permonth 5600
-                        =" "
-                        small ₽/месяц
-                    span.product__deposit Залог 101.500 ₽
-                    button.button.button-red.button-small
-                        svg(width=24 height=24 fill='none')
-                            use(xlink:href='/public/sprite.svg#icon--cart')
-                        span В корзину
-
+                        .product__content
+                            p.subtitle-2 Палатка двухместная автоматическая серая Dallas 2
+                            span.product__available.c-green Доступно к аренде
+                            .product__price
+                                span.product__percent -22%
+                                span.product__value 600
+                                    =" "
+                                    small ₽/месяц
+                                span.product__discount 500 ₽
+                            span.product__permonth 5600
+                                =" "
+                                small ₽/месяц
+                            span.product__deposit Залог 101.500 ₽
+                            button.button.button-red.button-small
+                                svg(width=24 height=24 fill='none')
+                                    use(xlink:href='/public/sprite.svg#icon--cart')
+                                span В корзину
 
     include ../views/components/media
 
-    section.popular
-        .section__header.justify
-            h2 Вы смотрели
-
-            .slider-buttons
-                .swiper-button-prev.button.button.button-gray.swiper-button-prev
-                    svg(width=24 height=24)
-                        use(xlink:href='/public/sprite.svg#angle--left')
-                .swiper-button-next.button.button-gray.swiper-button-next
-                    svg(width=24 height=24)
-                        use(xlink:href='/public/sprite.svg#angle--right')
-
-        include ../views/components/products-slider
+    include ../views/components/viewed
 
     section.like
         .section__header.justify

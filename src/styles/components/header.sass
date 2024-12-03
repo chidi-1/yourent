@@ -1,24 +1,60 @@
 .header
+  position: relative
+  z-index: 20
+  display: flex
+  flex-direction: column
+
+  &.open
+    height: 100vh
+
+    .nav__list
+      max-height: 50vh
+
+    .hamburger
+      span
+        opacity: 0
+
+      &:before
+        transform: translate(-50%,-50%) rotate(-45deg)
+
+      &:after
+        transform: translate(-50%,-50%) rotate(45deg)
+
   &__alert
     background: $gray-light
     padding: 1rem 0
     text-align: center
 
+    @include mobile
+      padding: 2rem 0
+      font-weight: 600
+
   &__top
     padding: 2rem 0
     border-bottom: 1px solid $gray
 
-    .info,
+    @include mobile
+      padding: 1rem 0
+
+    .justify
+      @include mobile
+        justify-content: flex-end
+
+    .hinfo,
     .contacts
       display: inline-flex
       align-items: center
       gap: 1.2rem
 
-    .info
+    .hinfo
+      @include mobile
+        display: none
+
       &__el
         display: inline-flex
         align-items: center
         gap: .6rem
+        font-weight: 600
 
         svg
           color: $gray
@@ -57,10 +93,23 @@
                 display: block
 
     .contacts
+      border: none !important
+      padding: 0 !important
+
       &__el
         display: inline-flex
         align-items: center
         gap: .6rem
+        font-weight: 600
+
+        @include mobile
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 3.2rem
+          height: 3.2rem
+          border-radius: 1rem
+          background: $gray-light
 
         svg
           color: $gray
@@ -74,6 +123,9 @@
       .phone
         @include subtitle1
 
+        @include mobile
+          display: none
+
       .social
         display: flex
         align-items: center
@@ -83,16 +135,24 @@
         height: 3.2rem
         border-radius: 1rem
 
+        @include mobile
+          display: none
+
   &__bottom
     padding: 1.2rem 0 3.2rem
     display: flex
     flex-direction: column
     gap: 2rem
 
+    @include mobile
+      padding-bottom: 1.5rem
+
   &__links
     @include tablet
       position: relative
       padding-bottom: 5rem
+    @include mobile
+      padding-bottom: 0
 
   &__navigation
     display: flex
@@ -107,6 +167,14 @@
     .logo
       width: 15.8rem
 
+      @include netbook
+        width: 10rem
+      @include mobile
+        width: 15.8rem
+        position: absolute
+        left: 1.5rem
+        top: -6rem
+
       img
         max-width: 100%
 
@@ -120,6 +188,16 @@
     .button.catalog
       font-size: 1.6rem
       gap: .4rem
+      flex-direction: row !important
+
+      @include mobile
+        min-width: 18rem
+        justify-content: center
+        align-items: center
+        padding: 0  .5rem
+
+      span
+        line-height: 2.4rem
 
       &:hover,
       &:focus
@@ -134,7 +212,7 @@
       gap: 2rem
 
       @include netbook
-        gap: 1rem
+        gap: .5rem
 
       @include tablet
         gap: 2rem
@@ -144,16 +222,40 @@
         bottom: 0
         background: $gray-light
         height: 3.9rem
+      @include mobile
+        top: -1.4rem
+        bottom: auto
+        height: auto
+        left: 0
+        right: 0
+        z-index: 50
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        @include transition
+        max-height: 0
+        overflow: hidden
+        border-radius: 0 0 2rem 2rem
 
       .nav__el
         display: inline-block
+        padding: 1rem
+
+        &:first-child
+          @include mobile
+            padding-top: 3rem
+
+        &:last-child
+          @include mobile
+            padding-bottom: 3rem
 
         a
           @include subtitle2
           @include transition
 
           @include netbook
-            font-size: 1.6rem
+            font-size: 1.4rem
 
           &:hover
             color: $red
@@ -164,11 +266,26 @@
     justify-content: center
     gap: 2rem
 
-    @include tablet
+    @include netbook
       gap: 1rem
+    @include mobile
+      flex-direction: row-reverse
+      padding-right: 4.5rem
 
     .search
       position: relative
+
+      @include mobile
+        position: absolute
+        overflow: hidden
+        width: 0
+        background: $white
+        padding: 1rem 0
+        right: 0
+
+      &.visible
+        width: 100vw
+        padding: 1rem 1.6rem
 
       .button
         width: 3.2rem
@@ -180,6 +297,9 @@
         top: 50%
         transform: translateY(-50%)
         color: $gray
+
+        @include mobile
+          right: 2rem !important
 
         &:hover
           color: $red
@@ -208,6 +328,10 @@
 
         @include tablet
           width: 34rem
+        @include mobile
+          width: 100%
+          padding: 1rem 3rem
+          text-align: center
 
         &::placeholder
           color: $gray
@@ -218,6 +342,12 @@
           &::placeholder
             opacity: 0
 
+          & + .button
+            background: $red
+
+            svg
+              color: $white
+
     .button.cart
       color: $gray
       min-width: 7.4rem
@@ -225,6 +355,10 @@
       gap: 1rem
       padding: 1rem !important
       border-radius: 2rem
+
+      @include mobile
+        padding: .5rem !important
+        height: 3.4rem
 
       &:hover,
       &:focus
@@ -248,15 +382,42 @@
         color: $white
         border-radius: 100%
 
+    .mobile-search-toggle
+      display: none
+      width: 3.4rem
+      height: 3.4rem
+      background: $gray-light url('/public/sprite.svg#icon--search-color-gray-view') no-repeat 50% 50%
+      background-size: 2.4rem 2.4rem !important
+      border-radius: 1rem
+      position: absolute
+      z-index: 10
+      right: 1.5rem
+      top: 50%
+      transform: translateY(-50%)
+
+      &.close
+        background: $gray-light url('/public/sprite.svg#icon--close-red-view') no-repeat 50% 50%
+        right: auto
+        left: 2rem
+
+      @include mobile
+        display: flex
+
   &__categories
     @include tablet
       overflow: auto
+    @include mobile
+      display: none
 
     .categories__list
       display: flex
       align-items: flex-start
       justify-content: space-between
+      flex-wrap: wrap
       gap: 1.5rem
+
+      @include netbook
+        justify-content: flex-start
 
     .button
       min-height: 3.9rem
@@ -269,3 +430,85 @@
       &.more
         width: 4.4rem
         height: 3.9rem
+
+  .hamburger
+    display: none
+
+    @include mobile
+      display: block
+      width: 3.6rem
+      height: 3.6rem
+      background: $gray-light
+      border-radius: 100%
+      position: relative
+      cursor: pointer
+
+      &:after,
+      &:before,
+      span
+        content: ''
+        position: absolute
+        width: 16px
+        height: 2px
+        border-radius: 3px
+        background: $red
+        left: 50%
+        top: 50%
+        @include transition
+
+      &:before
+        transform: translate(-50%, -5px)
+      &:after
+        transform: translate(-50%, 5px)
+      span
+        transform: translateX(-50%)
+
+  &__result
+    position: absolute
+    left: 0
+    right: 0
+    padding: 3rem
+
+    &.hidden
+      display: none
+
+    @include mobile
+      padding: 2rem
+
+    .background
+      position: absolute
+      inset: 0
+      backdrop-filter: blur(5px)
+      background: rgba(0,0,0,0.2)
+
+    .content
+      overflow-y: auto
+      overflow-x: hidden
+      width: 100%
+      max-width: 132rem
+      margin: 0 auto
+      padding: 2rem
+      background: #e6e6e6
+      border-radius: 2rem
+      position: relative
+      z-index: 10
+      max-height: 100%
+
+      .text-right
+        display: block
+        text-align: right
+
+        .button-close
+          width: 3.2rem
+          height: 3.2rem
+          border-radius: 5px
+          background: $white
+
+          svg
+            color: $red
+
+            path
+              stroke: $red
+
+      .h3
+        margin: 2rem 0

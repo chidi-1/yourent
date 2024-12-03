@@ -1,9 +1,18 @@
 .page-checkout
   .row.row-3
     align-items: flex-start
+    grid-template-columns: repeat(2, calc((100% + 2rem) * 0.335 - 2rem)) calc(calc((100% + 2rem) * 0.33 - 2rem))
 
   .total
     @include gray-bg
+    padding: 3rem
+    gap: 3rem
+
+    @include mobile
+      padding: 2rem
+
+    &__list
+      gap: 1rem
 
   .checkout
     &__container
@@ -39,6 +48,10 @@
             grid-template-columns: 12rem 1fr 11rem 11rem
             align-items: center
 
+            @include mobile
+              grid-template-columns: 7.5rem 1fr
+              padding: 1rem
+
             .product__images
               width: 100%
               height: auto
@@ -52,24 +65,43 @@
               text-align: left
               background: transparent
 
+              @include mobile
+                grid-row-start: 2
+
               span
                 display: inline-block
                 background: $gray-light
                 border-radius: 2rem
                 padding: 2px 5px
+                font-weight: 600
 
             .product__price
               display: flex
               flex-direction: column
               gap: .5rem
 
+              @include mobile
+                grid-row-start: 2
+                grid-column-start: 2
+                flex-direction: row-reverse
+
               span
                 font-size: 1.4rem
                 font-weight: 600
 
+                @include mobile
+                  font-size: 1.4rem
+
+                &:nth-child(2)
+                  @include mobile
+                    display: none
+
                 &.price
                   font-size: 2.4rem
                   font-weight: 700
+
+                  @include mobile
+                    font-size: 2rem
 
       label.get
         textarea

@@ -4,7 +4,7 @@ footer.footer
             .justify
                 .footer__col
                     a(href='').logo
-                        span logo
+                        img(src='/src/assets/images/logo.svg' alt='лого')
 
                 .footer__col
                     h3.nav__title О&nbsp;компании
@@ -71,3 +71,52 @@ footer.footer
                     img(src='/src/assets/images/logo--visa.svg' alt='Visa')
                     img(src='/src/assets/images/logo--union.svg' alt='Union Pay')
                     img(src='/src/assets/images/logo--mir.svg' alt='Мир')
+
+.hidden
+    div(id='more').modal.params
+        .params__container
+            h3.h3 Все категории
+
+            ul.categories__list
+                a(href='').button.button-yellow Интересные предложения
+                a(href='').button.button-gray  Палатки и&nbsp;спальники
+                a(href='').button.button-gray Велосипеды
+                a(href='').button.button-gray Игровые приставки
+                a(href='').button.button-gray Строй инструменты
+                a(href='').button.button-gray Проекторы и&nbsp;TV
+                a(href='').button.button-gray Пылесосы
+
+    div(id='towns').modal.towns
+        h3.h3 Выберите свой город
+
+        form(action='' method='').towns__form
+            input(type='text' placeholder='Введите название города').input.input-location
+            button(type='submit').button.button-red Сохранить
+
+        ul.towns__list
+            li.towns__el.active
+                span Москва
+            li.towns__el
+                span Королев
+            li.towns__el
+                span Электросталь
+            li.towns__el
+                span Дзержинский
+            li.towns__el
+                span Павловский Посад
+            li.towns__el
+                span Ретов
+            li.towns__el
+                span Зарайск
+
+    div(id='call').modal.call
+        h3.h3 Перезвоните мне
+
+        form(action='' method='').call__form
+            span Оставьте заявку и&nbsp;наши менеджеры  с&nbsp;вами свяжутся
+            input(type='text' placeholder='Ваше имя').input.input-name
+            input(type='text' placeholder='Номер телефона').input.input-phone
+            button(type='submit').button.button-red     Перезвонить мне
+            span Вы&nbsp;соглашаетесь на&nbsp;обработку
+                =" "
+                a(href='') персональных данных

@@ -1,4 +1,10 @@
 .page-index
+  main
+    padding-top: 3rem
+
+    @include mobile
+      padding-top: 2.5rem
+
   .banner
     &__content
       display: flex
@@ -8,6 +14,11 @@
       border-radius: 2rem
       padding: 6px 0
 
+      @include mobile
+        display: flex
+        flex-direction: column-reverse
+        gap: 2rem
+
       h1
         padding-left: 3.5rem
 
@@ -15,8 +26,79 @@
           background: transparent
           color: $red
 
+    &__img
+      @include mobile
+        height: 14rem
+
   .infograf
     .infograf__content
       background: $gray-light
       border-radius: 2rem
+
+  .popular
+    @include mobile
+      overflow: hidden
+      width: calc(100% + 3.2rem)
+      transform: translateX(-1.6rem)
+      padding: 0 1.6rem
+
+    .swiper
+      @include mobile
+        width: 80%
+        margin-left: 0
+        overflow: visible
+
+  .travel
+    @include mobile
+      overflow: hidden
+      width: calc(100% + 3.2rem)
+      transform: translateX(-1.6rem)
+      padding: 0 1.6rem
+
+    .categories__list
+      @include mobile
+        display: block
+        width: 80%
+        overflow: visible
+
+      .swiper-wrapper
+        display: flex
+        flex-wrap: wrap
+        align-items: stretch
+        align-content: stretch
+        gap: 2rem
+
+        @include mobile
+          overflow: visible
+          flex-wrap: nowrap
+
+        .swiper-slide
+          width: calc((100% + 2rem) / 4 - 2rem)
+          display: flex
+          align-items: stretch
+          height:  auto
+
+          .category
+            height:  auto
+            width: 100%
+
+            &__name
+              @include mobile
+                min-height: 10px
+
+    .mobile-slider
+      @include mobile
+        width: 80%
+        overflow: visible
+        margin-left: 0
+
+      .swiper-wrapper.row.row-4
+        display: grid
+        align-items: flex-start
+
+        @include mobile
+          display: flex
+          overflow: visible
+          flex-wrap: nowrap
+          flex-direction: row
 

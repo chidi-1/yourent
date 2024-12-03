@@ -22,7 +22,7 @@ block content
                     .checkout__container
                         .checkout__step
                             .composition
-                                h2 Состав заказа
+                                h3 Состав заказа
                                 hr
 
                                 ul.cart__list
@@ -103,7 +103,8 @@ block content
                                                     use(xlink:href='/public/sprite.svg#icon--build')
                                                 span.subtitle-2 Самовывоз
 
-                                            span.c-green  Бесплатно
+                                            span.c-green
+                                                strong Бесплатно
 
                                     .details__content
                                         .address
@@ -138,7 +139,8 @@ block content
                                                     use(xlink:href='/public/sprite.svg#icon--self-delivery')
                                                 span.subtitle-2 Самовывоз из&nbsp;пункта выдачи
 
-                                            span.c-green от 190 ₽
+                                            span.c-green
+                                                strong  от 190 ₽
 
                                     .details__content
                                         .address
@@ -167,15 +169,16 @@ block content
                                             .details__header
                                                 svg(width=46 height=46 fill='none')
                                                     use(xlink:href='/public/sprite.svg#icon--delivery')
-                                                span.subtitle-2 Доставкар
+                                                span.subtitle-2 Доставка
 
-                                            span.c-green от 590 ₽
+                                            span.c-green
+                                                strong  от 590 ₽
 
                                     .details__content
                                         .row.row-3.delivery__data
                                             .col-3.search-address
                                                 .search-address__container
-                                                    input(type='text' name='' placeholder='ФИО').input.input-name
+                                                    input(type='text' name='' placeholder='Адрес').input.input-location
 
                                                     // видимость управляется классом hidden
                                                     .search-address__result.hidden
@@ -210,7 +213,7 @@ block content
                                                 textarea(name='' placeholder='Комментарий к доставке').input.input-messsage
 
                 .total
-                    h2 Итог
+                    h3 Итог
 
                     .total__container
                         span.subtitle-1 Время аренды
@@ -245,9 +248,12 @@ block content
                                 span.total__param Залог
                                 span.total__value.c-gray 13400 ₽
                             li
-                                p.notification *Залог возвращается при завершении аренды
+                                p.notification  *Залог возвращается при завершении аренды
 
-                        button(disabled).button.button-green.disabled Подтвердить заказ
+                        .button-wrap
+                            button(disabled).button.button-green.disabled Подтвердить заказ
+                            button.button.button-green Подтвердить заказ
+                            span.c-gray Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку персональных данных. Ваши данные будут использоваться только для организации проката вещей и&nbsp;не&nbsp;будут переданы третьим лицам.
 
     section.insurance
         h3 Страховка аренды

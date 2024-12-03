@@ -5,19 +5,29 @@
     align-content: stretch
     gap: 2rem
 
+    @include netbook
+      flex-direction: column
+
     .cart__left
       display: flex
       flex-direction: column
       gap: 2rem
-      flex: 0 0 calc(100% - 42rem)
+      flex: 0 0 calc(100% - 44rem)
+
+      @include netbook
+        flex: auto
+        width: 100%
 
     .cart__right
       display: flex
       flex-direction: column
       gap: 2rem
-      width: 40rem
+      width: 42.7rem
       @include gray-bg
+      padding: 3rem
 
+      @include mobile
+        padding: 2rem
 
   .info
     @include gray-bg
@@ -30,6 +40,9 @@
       gap: 2rem
       align-items: stretch
 
+      @include mobile
+        flex-wrap: wrap
+
       li
         display: inline-block
         padding: 1.5rem 1rem
@@ -38,11 +51,20 @@
         color: $red
         font-weight: 600
 
+        @include mobile
+          width: calc(50% - 1rem)
+          padding: 1rem
+
     &__params
       display: grid
       grid-template-columns: repeat(3, 1fr)
       gap: 2rem
       align-items: stretch
+
+      @include mobile
+        display: flex
+        flex-direction: column
+        gap: 1rem
 
       li
         display: flex
@@ -63,10 +85,18 @@
       gap: 1rem
       color: $red
 
+      svg
+        @include mobile
+          width: 3.2rem
+          height: 3.2rem
+
   .calendar
     display: flex
     flex-direction: column
     gap: 1.7rem
+
+    @include mobile
+      gap: .5rem
 
   .cart-empty
     display: flex
@@ -75,8 +105,25 @@
     justify-content: center
     padding: 8rem 0
 
+    @include mobile
+      padding: 4rem 0
+
     *
       text-align: center
 
+    h1
+      @include mobile
+        font-size: 2.4rem
+
     .button
       display: inline-flex
+
+  .swiper
+    @include mobile
+      width: 80%
+      overflow: visible
+      margin-left: 0
+
+    .swiper-wrapper
+      @include mobile
+        overflow: visible

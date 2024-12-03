@@ -22,8 +22,11 @@ html
   background: $white
 
 body
-  @include font-params(1.6rem, 1.2, 400)
+  @include font-params(1.6rem, 2.24rem, 400)
   color: $black
+
+  @include tablet
+    @include font-params(1.4rem, 1.4, 400)
 
   *
     font: inherit

@@ -1,15 +1,63 @@
+.page-category
+  .subcategory__img
+    height: 13.5rem
+
+  .mobile-slider
+    @include mobile
+      width: 80%
+      overflow: visible
+      margin-left: 0
+
+    .swiper-wrapper.row.row-4
+      display: grid
+      align-items: flex-start
+
+      @include mobile
+        display: flex
+        overflow: visible
+        flex-wrap: nowrap
+        flex-direction: row
+
 .filter
   display: flex
   align-items: center
   gap: 1rem
+  font-weight: 600
+
+  @include mobile
+    display: block
+    background: $gray-light
+    border-radius: 2rem
+    padding: 2rem
+    justify-content: flex-start
+    align-items: flex-start
 
   &__title
     display: flex
     align-items: center
     gap: 1rem
+    font-size: 2rem
+    margin-right: 1rem
+
+    @include mobile
+      display: block
+      margin-bottom: 1rem
+      margin-right: 0
 
     svg
       color: $red
+
+  &__el
+    display: inline-flex
+
+    &:not(:last-child)
+      @include mobile
+        margin-bottom: 1rem
+
+  .choices
+    &__inner
+      @include mobile
+        background: $white
 
 .faq
   display: flex

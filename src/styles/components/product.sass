@@ -24,6 +24,7 @@
         height: 2.4rem
         border-radius: 100%
         @include transition
+        font-size: 2.6rem
 
         &:hover
           background: $red
@@ -34,9 +35,16 @@
       text-align: center
       transform: translateY(-1rem)
 
+      @include mobile
+        height: 8rem
+
       img
         max-width: 95%
         max-height: 95%
+
+        @include mobile
+          max-width: 100%
+          max-height: 100%
 
     .product__content
       padding: 0
@@ -44,6 +52,9 @@
 
       *
         text-align: center
+
+        @include mobile
+          font-size: 1.4rem
 
       .product__value
         @include subtitle2
@@ -64,6 +75,9 @@
     padding: 1rem 2rem
     align-items: center
 
+    @include mobile
+      grid-template-columns: 7.5rem 1fr
+
     .product__content
       padding: 0
       background: transparent
@@ -72,12 +86,18 @@
     display: flex
     align-items: stretch
 
+    @include  mobile
+      flex-direction: column
+
     &:not(:last-child)
       margin-bottom: 2rem
 
     .product__images,
     .product__content
       width: 50%
+
+      @include  mobile
+        width: 100%
 
     .product__images
       height: 100%
@@ -108,6 +128,9 @@
       padding: 2rem
       border-radius: 0 1.8rem 1.8rem 0
 
+      @include mobile
+        padding: 1rem
+
       .button
         position: static
 
@@ -118,9 +141,18 @@
         flex: 1 1 0
         max-width: calc(50% - .2rem)
 
+        @include  mobile
+          grid-column-start: 1
+          grid-column-end: 4
+          max-width: 100%
+
     .product__available
+      font-weight: 600
       display: block
       text-align: center
+
+      @include  mobile
+        font-size: 1.4rem
 
   &.not-available
     .subtitle-2,
@@ -152,12 +184,13 @@
         bottom: 0
         background: transparent
         padding: 0
-        gap: .3rem
+        gap: .3rem !important
+        justify-content: center !important
 
         li
           height: 2.3rem
           position: relative
-          width: 2.2rem
+          width: 2.2rem !important
           background: transparent
           border: none !important
           padding: 0
@@ -198,17 +231,40 @@
     flex-direction: column
     gap: 1.8rem
 
+    @include mobile
+      gap: .8rem
+      padding-bottom: 6rem
+
   &__price
     display: flex
     align-items: center
     justify-content: space-between
     gap: .5rem
 
+    @include mobile
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+
+    .product__value
+      @include mobile
+        grid-column-start: 1
+        grid-column-end: 3
+
+    .product__discount
+      @include mobile
+        grid-row-start: 1
+        grid-row-end: 2
+        grid-column-start: 2
+        grid-column-end: 3
+        text-align: center
+
   &__percent
     line-height: 1.2
     padding: .5rem
     border-radius: 2rem
     background: $yellow
+    font-weight: 600
+    text-align: center
 
   &__value
     font-size: 2.4rem
@@ -233,6 +289,7 @@
     padding: 4px
     color: $red
     min-height: 1.7rem
+    font-weight: 600
 
     small
       font-size: 1.4rem
@@ -245,6 +302,10 @@
     color: $gray-text
     text-align: center
     padding-top: 5px
+    font-weight: 600
+
+    @include mobile
+      line-height: 1.2
 
   .button
     position: absolute

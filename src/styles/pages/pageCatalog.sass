@@ -3,6 +3,10 @@
   align-items: stretch
   justify-content: space-between
 
+  @include mobile
+    flex-direction: column-reverse
+    gap: 3rem
+
   &__filter
     background: $gray-light
     border-radius: 2rem
@@ -12,10 +16,29 @@
     gap: 1rem
     width: 30rem
 
+    @include tablet
+      width: 25rem
+
+    @include mobile
+      width: 100%
+
     details
+      font-weight: 600
+
+      &[open] summary
+
+        &:after
+          transform: translateY(-50%) rotate(180deg)
+
       summary
+        margin-bottom: 0
+
         & > *
           color: $gray-text
+
+        &:after
+          top: 50%
+          transform: translateY(-50%)
 
   &__list
     display: flex
@@ -49,11 +72,27 @@
   &__categories
     width: calc(100% - 32rem)
 
+    @include tablet
+      width: calc(100% - 27rem)
+
+    @include mobile
+      width: 100%
+
     .categories__list
       .category
         width: calc((100% + 2rem) / 3 - 2rem)
 
+        @include tablet
+          width: calc((100% + 2rem) / 2 - 2rem)
+
+        @include mobile
+          width: 100%
+
         &__name
           left: 2rem
           bottom: 2rem
+
+          @include mobile
+            left: auto
+            bottom: auto
 

@@ -6,15 +6,27 @@ h2,
 .h2
   @include font-params(3rem, normal, 700)
 
+  @include mobile
+    @include font-params(2.4rem, normal, 700)
+
 h3,
 .h3
   @include font-params(2.4rem, 1.2, 700)
 
+  @include  mobile
+    @include font-params(2rem, 1.2, 700)
+
 .subtitle-1
   @include subtitle1
 
+  @include mobile
+    font-size: 1.6rem
+
 .subtitle-2
   @include subtitle2
+
+  @include mobile
+    font-size: 1.6rem
 
 ul
   list-style: disc

@@ -9,6 +9,11 @@
     overflow: hidden
     background: $gray-light
 
+    @include  mobile
+      display: flex !important
+      flex-direction: column-reverse
+      gap: 0
+
     .rules__delivery
       padding: 2rem
       display: flex
@@ -23,6 +28,9 @@
       height: 100%
       object-fit: cover
       border-radius: 0 2rem 2rem 0
+
+      @include  mobile
+        border-radius: 2rem 2rem 0 0
 
     .condition
       display: flex
@@ -39,6 +47,9 @@
     display: flex
     gap: 2rem
 
+    @include tablet
+      flex-direction: column
+
     &__el
       display: inline-flex
       align-items: center
@@ -46,17 +57,29 @@
       @include gray-bg
       width: calc((100% + 2rem) / 3 - 2rem)
 
+      @include tablet
+        display: flex
+        width: 100%
+      @include  mobile
+        gap: 1rem
+
     &__number
       font-size: 9.6rem
       line-height: 1
       color: $red
       font-weight: 700
 
+      @include  mobile
+        font-size: 5rem
+
     &__text
       flex: 1
 
       p
         @include subtitle1
+
+        @include  mobile
+          font-size: 1.6rem
 
     &__icon
       transform: rotate(-20deg)
@@ -76,6 +99,9 @@
       flex-direction: column
       gap: 1rem
 
+      @include  mobile
+        width: 100%
+
       &-l
         width: 100%
 
@@ -84,9 +110,21 @@
     grid-template-columns: 300px 1fr
     gap: 3rem
 
+    @include tablet
+      display: flex
+      flex-direction: column
+
     &__img
+      @include tablet
+        margin: 0 auto
+
       img
         max-width: 100%
+
+        @include tablet
+          max-width: 25rem
+        @include  mobile
+          max-width: 20rem
 
     &__content
       display: flex
@@ -105,9 +143,15 @@
       border-radius: 2rem
       display: grid
       grid-template-columns: repeat(3, 1fr)
+      @include  mobile
+        grid-template-columns: 100%
 
       & > div
         padding: 2rem
+
+        @include  mobile
+          border-bottom: 1px solid #585f68
+          padding: 1rem
 
         &:nth-child(1),
         &:nth-child(2),
@@ -118,8 +162,46 @@
         &:nth-child(3n + 2)
           border-right: 1px solid #585f68
 
+          @include  mobile
+            border-right: none
+
+        &:nth-child(4)
+          @include  mobile
+            grid-row-start: 2
+            grid-row-end: 3
+
+        &:nth-child(2)
+          @include  mobile
+            grid-row-start: 3
+            grid-row-end: 4
+
+        &:nth-child(4)
+          @include  mobile
+            grid-row-start: 4
+            grid-row-end: 5
+
+        &:nth-child(3)
+          @include  mobile
+            grid-row-start: 5
+            grid-row-end: 6
+
+        &:nth-child(6)
+          @include  mobile
+            grid-row-start: 6
+            grid-row-end: 7
 
         &.th
           text-align: center
           min-height: 6.4rem
 
+          @include  mobile
+            min-height: 1rem
+            padding: 2rem
+
+    &__max
+      @include  mobile
+        text-align: center
+
+      h3
+        @include  mobile
+          display: inline

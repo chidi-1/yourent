@@ -12,7 +12,10 @@ main
   display: flex
   flex-direction: column
   gap: 6rem
-  padding: 3rem 0 6rem
+  padding: 0 0 6rem
+
+  @include mobile
+    gap: 3rem
 
 .page
   width: 100%
@@ -24,6 +27,9 @@ section
   display: flex
   flex-direction: column
   gap: 3rem
+
+  @include mobile
+    gap: 2rem
 
   .section__header
     display: flex
@@ -38,6 +44,9 @@ section
     display: flex
     align-items: center
     gap: 1rem
+
+    @include  mobile
+      display: none
 
 .breadcrumbs
   display: flex
@@ -96,6 +105,9 @@ details
       display: block
       max-width: calc(100% - 3.5rem)
       @include transition
+
+  .details__content
+    padding-top: 1rem
 
 .pagination
   display: flex

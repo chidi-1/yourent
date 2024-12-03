@@ -1,4 +1,6 @@
 .tabs
+  max-width: 100%
+
   &__caption
     background: $gray-light
     border-radius: 2rem
@@ -26,5 +28,8 @@
       &:hover
         color: $red
 
-  &__content:not(.active)
-    display: none
+  &__content
+    width: 100%
+
+    &:not(.active)
+      display: none

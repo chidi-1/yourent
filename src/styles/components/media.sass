@@ -1,3 +1,35 @@
+.media-section
+  .tabs
+    &__caption
+      @include mobile
+        gap: 0
+        width: 100%
+
+      li
+        @include mobile
+          width: 33.3%
+          padding: 1rem 0
+
+    .slider-buttons
+      @include  mobile
+        display: none
+
+    &__content
+      overflow: hidden
+      width: calc(100% + 3.2rem)
+      transform: translateX(-1.6rem)
+      padding: 0 1.6rem
+
+      .swiper
+        @include  mobile
+          width: 80%
+          overflow: visible
+          margin-left: 0
+
+        .swiper-wrapper
+          @include  mobile
+            overflow: visible
+
 .media
   display: flex
   flex-direction: column
@@ -30,3 +62,4 @@
 
   .subtitle-2
     color: $gray-text
+

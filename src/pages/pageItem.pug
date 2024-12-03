@@ -213,7 +213,7 @@ block content
                                 span.name Материал каркаса
                                 span.value Стеклопластик
 
-                        button(data-fancybox data-src='#params-modal').button.button-red.button-small Показать все
+                        button(data-fancybox data-src='#params').button.button-red.button-small Показать все
 
                 .use
                     h3 Доставка и&nbsp;самовывоз
@@ -251,61 +251,79 @@ block content
                                 =" "
                                 span.c-red от&nbsp;199&nbsp;₽
 
-                .structure
-                    ul.structure__caption
-                        li.active Комплект
-                        li(data-fancybox data-src='#params-modal') Инструкция
+                .structure.tabs
+                        ul.tabs__caption
+                            li.active Комплект
+                            li Инструкция
 
-                    .structure__content
-                        .section__header.justify
-                            h3 Что входит в комплект?
+                        .tabs__content.active
+                            .structure__content
+                                .section__header.justify
+                                    h3 Что входит в комплект?
 
-                            .slider-buttons
-                                .swiper-button-prev.button.button.button-gray.swiper-button-prev
-                                    svg(width=24 height=24)
-                                        use(xlink:href='/public/sprite.svg#angle--left')
-                                .swiper-button-next.button.button-gray.swiper-button-next
-                                    svg(width=24 height=24)
-                                        use(xlink:href='/public/sprite.svg#angle--right')
+                                    .slider-buttons
+                                        .swiper-button-prev.button.button.button-gray.swiper-button-prev
+                                            svg(width=24 height=24)
+                                                use(xlink:href='/public/sprite.svg#angle--left')
+                                        .swiper-button-next.button.button-gray.swiper-button-next
+                                            svg(width=24 height=24)
+                                                use(xlink:href='/public/sprite.svg#angle--right')
 
-                        .swiper.js--media-slider
-                            .swiper-wrapper
-                                .swiper-slide
-                                    .structure__img
-                                        picture
-                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
-                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
-                                    span.structure__name  Тент
-                                .swiper-slide
-                                    .structure__img
-                                        picture
-                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
-                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
-                                    span.structure__name  Комната
-                                .swiper-slide
-                                    .structure__img
-                                        picture
-                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
-                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
-                                    span.structure__name  24 колышка
-                                .swiper-slide
-                                    .structure__img
-                                        picture
-                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
-                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
-                                    span.structure__name  Тент
-                                .swiper-slide
-                                    .structure__img
-                                        picture
-                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
-                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
-                                    span.structure__name  Комната
-                                .swiper-slide
-                                    .structure__img
-                                        picture
-                                            source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
-                                            img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
-                                    span.structure__name  24 колышка
+                                .swiper.js--structure-slider
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            .structure__img
+                                                picture
+                                                    source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                                    img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                            span.structure__name  Тент
+                                        .swiper-slide
+                                            .structure__img
+                                                picture
+                                                    source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                                    img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                            span.structure__name  Комната
+                                        .swiper-slide
+                                            .structure__img
+                                                picture
+                                                    source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                                    img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                            span.structure__name  24 колышка
+                                        .swiper-slide
+                                            .structure__img
+                                                picture
+                                                    source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                                    img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                            span.structure__name  Тент
+                                        .swiper-slide
+                                            .structure__img
+                                                picture
+                                                    source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                                    img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                            span.structure__name  Комната
+                                        .swiper-slide
+                                            .structure__img
+                                                picture
+                                                    source(type='image/webp' srcset='/src/assets/images/img--category-3@2x.webp 2x, /src/assets/images/img--category-3.webp 1x')
+                                                    img(src='/src/assets/images/img--category-3@2x.png 2x, /src/assets/images/img--category-3.png 1x')
+                                            span.structure__name  24 колышка
+
+                        .tabs__content
+                            .manual
+                                p Двухместная автоматическая палатка Dallas 2&nbsp;обеспечивает удобство и&nbsp;простоту в&nbsp;установке. Вот инструкция по&nbsp;ее&nbsp;установке:
+                                p Шаг&nbsp;1: Распакуйте палатку из&nbsp;сумки. Убедитесь, что все компоненты находятся в&nbsp;комплекте, включая палатку, каркас, канаты, кольца и&nbsp;колышки.
+                                p Шаг&nbsp;1: Распакуйте палатку из&nbsp;сумки. Убедитесь, что все компоненты
+
+                                .manual__links
+                                    a(href='').manual__link
+                                        svg(width=32 height=32 fill='none' )
+                                            use(xlink:href='/public/sprite.svg#icon--file')
+                                        span Инструкция по эксплуатации
+
+                                    a(href='').manual__link
+                                        svg(width=32 height=32 fill='none' )
+                                            use(xlink:href='/public/sprite.svg#icon--file')
+                                        span Инструкция по эксплуатации
 
                 .video
                     .poster
@@ -347,7 +365,7 @@ block content
     .hidden
         div(id='video').modal.video
 
-        div(id='params-modal').modal.item
+        div(id='params').modal.params
             .params__container
                 h3 Характеристики
 
